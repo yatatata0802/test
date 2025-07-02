@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Target, 
-  TrendingUp, 
-  Heart, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Target,
+  TrendingUp,
+  Heart,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
   Zap,
   ArrowRight,
   Quote,
@@ -16,8 +16,8 @@ import {
   Shield,
   MessageCircle,
   Home,
-  ArrowUp
-} from 'lucide-react';
+  ArrowUp,
+} from "lucide-react";
 
 const ServicesPage: React.FC = () => {
   const navigate = useNavigate();
@@ -25,71 +25,74 @@ const ServicesPage: React.FC = () => {
 
   const services = [
     {
-      title: '行動変容支援',
-      subtitle: '「変わりたい」を「変われる」に',
-      description: '頭では分かってるのに行動できない。そんなあなたの心の壁を取り除き、確実に一歩を踏み出せるようサポートします。',
+      title: "行動変容支援",
+      subtitle: "「変わりたい」を「変われる」に",
+      description:
+        "頭では分かってるのに行動できない。そんなあなたの心の壁を取り除き、確実に一歩を踏み出せるようサポートします。",
       icon: Target,
-      color: '#e53935',
+      color: "#e53935",
       features: [
-        '目標設定とアクションプランの作成',
-        '行動の障壁となる思考パターンの特定',
-        '小さな成功体験の積み重ね',
-        '継続的なモチベーション管理'
+        "目標設定とアクションプランの作成",
+        "行動の障壁となる思考パターンの特定",
+        "小さな成功体験の積み重ね",
+        "継続的なモチベーション管理",
       ],
       benefits: [
-        '3ヶ月で行動力が劇的に向上',
-        '先延ばし癖が改善される',
-        '自信を持って挑戦できるようになる'
+        "3ヶ月で行動力が劇的に向上",
+        "先延ばし癖が改善される",
+        "自信を持って挑戦できるようになる",
       ],
       testimonial: {
         text: "今まで何をやっても続かなかった私が、3ヶ月で人生が変わりました。",
-        author: "30代 会社員 T.Mさん"
-      }
+        author: "30代 会社員 T.Mさん",
+      },
     },
     {
-      title: '自己管理強化',
-      subtitle: '継続する力を身につける',
-      description: '三日坊主から卒業し、目標達成に不可欠な「継続する力」を科学的アプローチで育てます。',
+      title: "自己管理強化",
+      subtitle: "継続する力を身につける",
+      description:
+        "三日坊主から卒業し、目標達成に不可欠な「継続する力」を科学的アプローチで育てます。",
       icon: TrendingUp,
-      color: '#d4af37',
+      color: "#d4af37",
       features: [
-        '習慣化のメカニズム理解',
-        '時間管理とエネルギー管理',
-        'セルフモニタリング技術',
-        '挫折からの立ち直り方'
+        "習慣化のメカニズム理解",
+        "時間管理とエネルギー管理",
+        "セルフモニタリング技術",
+        "挫折からの立ち直り方",
       ],
       benefits: [
-        '習慣化成功率90%以上',
-        '時間の使い方が劇的に改善',
-        'ストレス耐性が向上'
+        "習慣化成功率90%以上",
+        "時間の使い方が劇的に改善",
+        "ストレス耐性が向上",
       ],
       testimonial: {
         text: "毎日の習慣が身につき、仕事もプライベートも充実しています。",
-        author: "40代 経営者 K.Sさん"
-      }
+        author: "40代 経営者 K.Sさん",
+      },
     },
     {
-      title: '心と身体のサポート',
-      subtitle: '内面と外見の両方から変革',
-      description: 'フィジーク経験を活かし、メンタルとフィジカルの両面から統合的なセルフマネジメントを支援します。',
+      title: "心と身体のサポート",
+      subtitle: "内面と外見の両方から変革",
+      description:
+        "筋トレや運動を通じて得た継続のコツを活かし、メンタルとフィジカルの両面からバランスの取れたサポートを提供します。",
       icon: Heart,
-      color: '#4caf50',
+      color: "#4caf50",
       features: [
-        'メンタルとフィジカルの相互作用理解',
-        'ストレス管理とリカバリー',
-        'パフォーマンス向上のための生活習慣',
-        '自信構築のためのボディメイク'
+        "メンタルとフィジカルの相互作用理解",
+        "ストレス管理とリカバリー",
+        "パフォーマンス向上のための生活習慣",
+        "自信構築のためのボディメイク",
       ],
       benefits: [
-        '心身ともに健康的な変化',
-        '自信と魅力が大幅アップ',
-        'エネルギーレベルが向上'
+        "心身ともに健康的な変化",
+        "自信と魅力が大幅アップ",
+        "エネルギーレベルが向上",
       ],
       testimonial: {
         text: "見た目も心も変わって、周りからの反応が全然違います。",
-        author: "20代 フリーランス A.Hさん"
-      }
-    }
+        author: "20代 フリーランス A.Hさん",
+      },
+    },
   ];
 
   const successStories = [
@@ -97,20 +100,20 @@ const ServicesPage: React.FC = () => {
       before: "毎日同じことの繰り返しで、将来に不安を感じていた",
       after: "新しい挑戦を続け、理想の自分に近づいている",
       period: "6ヶ月",
-      age: "30代男性"
+      age: "30代男性",
     },
     {
       before: "何をやっても続かず、自分に自信が持てなかった",
       after: "習慣化に成功し、目標を次々と達成している",
       period: "3ヶ月",
-      age: "20代女性"
+      age: "20代女性",
     },
     {
       before: "仕事のストレスで心身ともに疲弊していた",
       after: "ストレス管理ができ、エネルギッシュに過ごしている",
       period: "4ヶ月",
-      age: "40代男性"
-    }
+      age: "40代男性",
+    },
   ];
 
   const pricingPlans = [
@@ -122,9 +125,9 @@ const ServicesPage: React.FC = () => {
         "月2回のセッション（60分）",
         "24時間チャットサポート",
         "目標設定・進捗管理",
-        "習慣化サポート"
+        "習慣化サポート",
       ],
-      popular: false
+      popular: false,
     },
     {
       name: "プレミアム",
@@ -136,9 +139,9 @@ const ServicesPage: React.FC = () => {
         "目標設定・進捗管理",
         "習慣化サポート",
         "ボディメイク指導",
-        "栄養・睡眠アドバイス"
+        "栄養・睡眠アドバイス",
       ],
-      popular: true
+      popular: true,
     },
     {
       name: "VIP",
@@ -150,14 +153,14 @@ const ServicesPage: React.FC = () => {
         "完全オーダーメイドプログラム",
         "ライフスタイル全般サポート",
         "緊急時の電話相談",
-        "成果保証制度"
+        "成果保証制度",
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -188,7 +191,8 @@ const ServicesPage: React.FC = () => {
               あなたの"変わりたい"を現実にする
             </p>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-              200名以上の人生を変えてきた実績<br />
+              200名以上の人生を変えてきた実績
+              <br />
               満足度98%のパーソナルコーチング
             </p>
           </motion.div>
@@ -235,7 +239,7 @@ const ServicesPage: React.FC = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               const isActive = activeService === index;
-              
+
               return (
                 <motion.div
                   key={index}
@@ -245,18 +249,24 @@ const ServicesPage: React.FC = () => {
                   onHoverStart={() => setActiveService(index)}
                   onHoverEnd={() => setActiveService(null)}
                   className={`relative p-6 sm:p-8 rounded-2xl border transition-all duration-500 cursor-pointer group ${
-                    isActive 
-                      ? 'bg-gradient-to-br from-white/10 to-white/5 border-[#d4af37]/60 transform scale-105' 
-                      : 'bg-white/5 border-white/10 hover:border-[#d4af37]/40'
+                    isActive
+                      ? "bg-gradient-to-br from-white/10 to-white/5 border-[#d4af37]/60 transform scale-105"
+                      : "bg-white/5 border-white/10 hover:border-[#d4af37]/40"
                   }`}
                 >
                   {/* アイコンとタイトル */}
                   <div className="flex items-center mb-4 sm:mb-6">
-                    <div 
+                    <div
                       className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center mr-4"
-                      style={{ backgroundColor: `${service.color}20`, border: `2px solid ${service.color}` }}
+                      style={{
+                        backgroundColor: `${service.color}20`,
+                        border: `2px solid ${service.color}`,
+                      }}
                     >
-                      <IconComponent size={24} style={{ color: service.color }} />
+                      <IconComponent
+                        size={24}
+                        style={{ color: service.color }}
+                      />
                     </div>
                     <div>
                       <h3 className="text-xl sm:text-2xl font-bold text-white">
@@ -274,11 +284,19 @@ const ServicesPage: React.FC = () => {
 
                   {/* 特徴 */}
                   <div className="mb-6">
-                    <h4 className="text-[#d4af37] font-semibold mb-3">サポート内容</h4>
+                    <h4 className="text-[#d4af37] font-semibold mb-3">
+                      サポート内容
+                    </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start text-sm sm:text-base">
-                          <CheckCircle size={16} className="text-[#d4af37] mr-2 mt-1 flex-shrink-0" />
+                        <li
+                          key={featureIndex}
+                          className="flex items-start text-sm sm:text-base"
+                        >
+                          <CheckCircle
+                            size={16}
+                            className="text-[#d4af37] mr-2 mt-1 flex-shrink-0"
+                          />
                           <span className="text-gray-300">{feature}</span>
                         </li>
                       ))}
@@ -287,11 +305,19 @@ const ServicesPage: React.FC = () => {
 
                   {/* ベネフィット */}
                   <div className="mb-6">
-                    <h4 className="text-[#d4af37] font-semibold mb-3">期待できる効果</h4>
+                    <h4 className="text-[#d4af37] font-semibold mb-3">
+                      期待できる効果
+                    </h4>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-start text-sm sm:text-base">
-                          <Star size={16} className="text-[#ffd700] mr-2 mt-1 flex-shrink-0" />
+                        <li
+                          key={benefitIndex}
+                          className="flex items-start text-sm sm:text-base"
+                        >
+                          <Star
+                            size={16}
+                            className="text-[#ffd700] mr-2 mt-1 flex-shrink-0"
+                          />
                           <span className="text-gray-300">{benefit}</span>
                         </li>
                       ))}
@@ -301,7 +327,10 @@ const ServicesPage: React.FC = () => {
                   {/* お客様の声 */}
                   <div className="bg-gradient-to-r from-[#d4af37]/10 to-transparent p-4 rounded-lg border-l-4 border-[#d4af37]">
                     <div className="flex items-start gap-2 mb-2">
-                      <Quote size={16} className="text-[#d4af37] mt-1 flex-shrink-0" />
+                      <Quote
+                        size={16}
+                        className="text-[#d4af37] mt-1 flex-shrink-0"
+                      />
                       <p className="text-sm italic text-gray-300">
                         {service.testimonial.text}
                       </p>
@@ -312,10 +341,12 @@ const ServicesPage: React.FC = () => {
                   </div>
 
                   {/* ホバー効果 */}
-                  <div className={`absolute inset-0 rounded-2xl transition-opacity duration-500 pointer-events-none ${
-                    isActive ? 'opacity-100' : 'opacity-0'
-                  }`}>
-                    <div 
+                  <div
+                    className={`absolute inset-0 rounded-2xl transition-opacity duration-500 pointer-events-none ${
+                      isActive ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <div
                       className="absolute inset-0 rounded-2xl blur-xl opacity-30"
                       style={{ backgroundColor: service.color }}
                     />
@@ -353,12 +384,16 @@ const ServicesPage: React.FC = () => {
                     <Clock size={12} />
                     {story.period}で変化
                   </div>
-                  <p className="text-sm text-[#d4af37] font-medium">{story.age}</p>
+                  <p className="text-sm text-[#d4af37] font-medium">
+                    {story.age}
+                  </p>
                 </div>
 
                 <div className="space-y-4">
                   <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-                    <h4 className="text-red-400 font-semibold mb-2 text-sm">BEFORE</h4>
+                    <h4 className="text-red-400 font-semibold mb-2 text-sm">
+                      BEFORE
+                    </h4>
                     <p className="text-gray-300 text-sm">{story.before}</p>
                   </div>
 
@@ -367,7 +402,9 @@ const ServicesPage: React.FC = () => {
                   </div>
 
                   <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
-                    <h4 className="text-green-400 font-semibold mb-2 text-sm">AFTER</h4>
+                    <h4 className="text-green-400 font-semibold mb-2 text-sm">
+                      AFTER
+                    </h4>
                     <p className="text-gray-300 text-sm">{story.after}</p>
                   </div>
                 </div>
@@ -397,9 +434,9 @@ const ServicesPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 className={`relative p-6 sm:p-8 rounded-2xl border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border-[#d4af37]/60 transform scale-105' 
-                    : 'bg-white/5 border-white/10 hover:border-[#d4af37]/40'
+                  plan.popular
+                    ? "bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border-[#d4af37]/60 transform scale-105"
+                    : "bg-white/5 border-white/10 hover:border-[#d4af37]/40"
                 }`}
               >
                 {plan.popular && (
@@ -411,26 +448,33 @@ const ServicesPage: React.FC = () => {
                 )}
 
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-3xl font-bold text-[#d4af37] mb-1">{plan.price}</div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <div className="text-3xl font-bold text-[#d4af37] mb-1">
+                    {plan.price}
+                  </div>
                   <p className="text-sm text-gray-400">{plan.duration}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle size={16} className="text-[#d4af37] mr-3 mt-1 flex-shrink-0" />
+                      <CheckCircle
+                        size={16}
+                        className="text-[#d4af37] mr-3 mt-1 flex-shrink-0"
+                      />
                       <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <button
-                  onClick={() => navigate('/contact')}
+                  onClick={() => navigate("/contact")}
                   className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-[#e53935] to-[#d4af37] text-white hover:from-[#d4af37] hover:to-[#e53935]'
-                      : 'bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] hover:from-[#ffd700] hover:to-[#d4af37]'
+                      ? "bg-gradient-to-r from-[#e53935] to-[#d4af37] text-white hover:from-[#d4af37] hover:to-[#e53935]"
+                      : "bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] hover:from-[#ffd700] hover:to-[#d4af37]"
                   }`}
                 >
                   このプランで始める
@@ -484,7 +528,7 @@ const ServicesPage: React.FC = () => {
             className="p-8 sm:p-12 bg-gradient-to-br from-[#e53935]/20 via-[#d4af37]/20 to-[#ffd700]/20 border border-[#e53935]/40 rounded-2xl text-center backdrop-blur-sm relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#e53935]/10 to-[#ffd700]/10 rounded-2xl blur-xl opacity-50" />
-            
+
             <div className="relative z-10">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#e53935]/20 border border-[#e53935]/50 rounded-full text-[#e53935] text-sm font-bold mb-6">
                 <Zap size={16} className="animate-pulse" />
@@ -494,15 +538,16 @@ const ServicesPage: React.FC = () => {
               <h3 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4">
                 人生を変える第一歩を、今すぐ
               </h3>
-              
+
               <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
-                200名以上の人生を変えてきた実績。<br />
+                200名以上の人生を変えてきた実績。
+                <br />
                 あなたの番です。
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  onClick={() => navigate('/contact')}
+                  onClick={() => navigate("/contact")}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full sm:w-auto px-8 py-4 text-lg font-bold bg-gradient-to-r from-[#e53935] via-[#d4af37] to-[#ffd700] text-white rounded-full transition-all duration-300 hover:shadow-[0_12px_40px_rgba(229,57,53,0.4)] relative overflow-hidden"
@@ -526,7 +571,7 @@ const ServicesPage: React.FC = () => {
       {/* ナビゲーションボタン */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-8 sm:py-12 px-4">
         <motion.button
-          onClick={() => navigate('/main')}
+          onClick={() => navigate("/main")}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] rounded-full transition-all duration-300 hover:shadow-[0_8px_32px_rgba(212,175,55,0.4)] mobile-touch-target"
@@ -534,7 +579,7 @@ const ServicesPage: React.FC = () => {
           <Home size={20} />
           HOMEに戻る
         </motion.button>
-        
+
         <motion.button
           onClick={scrollToTop}
           whileHover={{ scale: 1.05 }}
