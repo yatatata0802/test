@@ -19,6 +19,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import SEO from "../components/SEO";
+import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const ServicesPage: React.FC = () => {
   const navigate = useNavigate();
@@ -28,66 +29,66 @@ const ServicesPage: React.FC = () => {
     {
       title: "行動変容支援",
       subtitle: "「変わりたい」を「変われる」に",
-      description: `頭では分かってるのに行動できない。<br className="mobile-only-br"/>そんなあなたの心の壁を取り除き、<br className="mobile-only-br"/>確実に一歩を踏み出せるようサポートします。`,
+      description: smartBreakJapanese(`頭では分かってるのに行動できない。そんなあなたの心の壁を取り除き、確実に一歩を踏み出せるようサポートします。`),
       icon: Target,
       color: "#e53935",
       features: [
-        "目標設定とアクションプランの作成",
-        "行動の障壁となる思考パターンの特定",
-        "小さな成功体験の積み重ね",
-        "継続的なモチベーション管理",
+        smartBreakJapanese("目標設定とアクションプランの作成"),
+        smartBreakJapanese("行動の障壁となる思考パターンの特定"),
+        smartBreakJapanese("小さな成功体験の積み重ね"),
+        smartBreakJapanese("継続的なモチベーション管理"),
       ],
       benefits: [
-        "3ヶ月で行動力が劇的に向上",
-        "先延ばし癖が改善される",
-        "自信を持って挑戦できるようになる",
+        smartBreakJapanese("3ヶ月で行動力が劇的に向上"),
+        smartBreakJapanese("先延ばし癖が改善される"),
+        smartBreakJapanese("自信を持って挑戦できるようになる"),
       ],
       testimonial: {
-        text: "今まで何をやっても続かなかった私が、3ヶ月で人生が変わりました。",
+        text: smartBreakJapanese("今まで何をやっても続かなかった私が、3ヶ月で人生が変わりました。"),
         author: "30代 会社員 T.Mさん",
       },
     },
     {
       title: "自己管理強化",
       subtitle: "継続する力を身につける",
-      description: `三日坊主から卒業し、<br className="mobile-only-br"/>目標達成に不可欠な「継続する力」を<br className="mobile-only-br"/>科学的アプローチで育てます。`,
+      description: smartBreakJapanese(`三日坊主から卒業し、目標達成に不可欠な「継続する力」を科学的アプローチで育てます。`),
       icon: TrendingUp,
       color: "#d4af37",
       features: [
-        "習慣化のメカニズム理解",
-        "時間管理とエネルギー管理",
-        "セルフモニタリング技術",
-        "挫折からの立ち直り方",
+        smartBreakJapanese("習慣化のメカニズム理解"),
+        smartBreakJapanese("時間管理とエネルギー管理"),
+        smartBreakJapanese("セルフモニタリング技術"),
+        smartBreakJapanese("挫折からの立ち直り方"),
       ],
       benefits: [
-        "習慣化成功率90%以上",
-        "時間の使い方が劇的に改善",
-        "ストレス耐性が向上",
+        smartBreakJapanese("習慣化成功率90%以上"),
+        smartBreakJapanese("時間の使い方が劇的に改善"),
+        smartBreakJapanese("ストレス耐性が向上"),
       ],
       testimonial: {
-        text: "毎日の習慣が身につき、仕事もプライベートも充実しています。",
+        text: smartBreakJapanese("毎日の習慣が身につき、仕事もプライベートも充実しています。"),
         author: "40代 経営者 K.Sさん",
       },
     },
     {
       title: "心と身体のサポート",
       subtitle: "内面と外見の両方から変革",
-      description: `筋トレや運動を通じて得た継続のコツを活かし、<br className="mobile-only-br"/>メンタルとフィジカルの両面から<br className="mobile-only-br"/>バランスの取れたサポートを提供します。`,
+      description: smartBreakJapanese(`筋トレや運動を通じて得た継続のコツを活かし、メンタルとフィジカルの両面からバランスの取れたサポートを提供します。`),
       icon: Heart,
       color: "#4caf50",
       features: [
-        "メンタルとフィジカルの相互作用理解",
-        "ストレス管理とリカバリー",
-        "パフォーマンス向上のための生活習慣",
-        "自信構築のためのボディメイク",
+        smartBreakJapanese("メンタルとフィジカルの相互作用理解"),
+        smartBreakJapanese("ストレス管理とリカバリー"),
+        smartBreakJapanese("パフォーマンス向上のための生活習慣"),
+        smartBreakJapanese("自信構築のためのボディメイク"),
       ],
       benefits: [
-        "心身ともに健康的な変化",
-        "自信と魅力が大幅アップ",
-        "エネルギーレベルが向上",
+        smartBreakJapanese("心身ともに健康的な変化"),
+        smartBreakJapanese("自信と魅力が大幅アップ"),
+        smartBreakJapanese("エネルギーレベルが向上"),
       ],
       testimonial: {
-        text: "見た目も心も変わって、周りからの反応が全然違います。",
+        text: smartBreakJapanese("見た目も心も変わって、周りからの反応が全然違います。"),
         author: "20代 フリーランス A.Hさん",
       },
     },
@@ -95,20 +96,20 @@ const ServicesPage: React.FC = () => {
 
   const successStories = [
     {
-      before: "毎日同じことの繰り返しで、将来に不安を感じていた",
-      after: "新しい挑戦を続け、理想の自分に近づいている",
+      before: smartBreakJapanese("毎日同じことの繰り返しで、将来に不安を感じていた"),
+      after: smartBreakJapanese("新しい挑戦を続け、理想の自分に近づいている"),
       period: "6ヶ月",
       age: "30代男性",
     },
     {
-      before: "何をやっても続かず、自分に自信が持てなかった",
-      after: "習慣化に成功し、目標を次々と達成している",
+      before: smartBreakJapanese("何をやっても続かず、自分に自信が持てなかった"),
+      after: smartBreakJapanese("習慣化に成功し、目標を次々と達成している"),
       period: "3ヶ月",
       age: "20代女性",
     },
     {
-      before: "仕事のストレスで心身ともに疲弊していた",
-      after: "ストレス管理ができ、エネルギッシュに過ごしている",
+      before: smartBreakJapanese("仕事のストレスで心身ともに疲弊していた"),
+      after: smartBreakJapanese("ストレス管理ができ、エネルギッシュに過ごしている"),
       period: "4ヶ月",
       age: "40代男性",
     },
@@ -120,10 +121,10 @@ const ServicesPage: React.FC = () => {
       price: "月額 15,000円",
       duration: "3ヶ月コース",
       features: [
-        "月1回のセッション（60分）",
-        "チャットサポート",
-        "目標設定・進捗管理",
-        "基本的な習慣化サポート",
+        smartBreakJapanese("月1回のセッション（60分）"),
+        smartBreakJapanese("チャットサポート"),
+        smartBreakJapanese("目標設定・進捗管理"),
+        smartBreakJapanese("基本的な習慣化サポート"),
       ],
       popular: false,
     },
@@ -132,11 +133,11 @@ const ServicesPage: React.FC = () => {
       price: "月額 25,000円",
       duration: "6ヶ月コース",
       features: [
-        "月2回のセッション（60分）",
-        "24時間チャットサポート",
-        "目標設定・進捗管理",
-        "習慣化サポート",
-        "継続的なモチベーション管理",
+        smartBreakJapanese("月2回のセッション（60分）"),
+        smartBreakJapanese("24時間チャットサポート"),
+        smartBreakJapanese("目標設定・進捗管理"),
+        smartBreakJapanese("習慣化サポート"),
+        smartBreakJapanese("継続的なモチベーション管理"),
       ],
       popular: true,
     },
@@ -145,11 +146,11 @@ const ServicesPage: React.FC = () => {
       price: "月額 40,000円",
       duration: "12ヶ月コース",
       features: [
-        "月3回のセッション（90分）",
-        "24時間優先チャットサポート",
-        "完全オーダーメイドプログラム",
-        "継続的なモチベーション管理",
-        "成果保証制度",
+        smartBreakJapanese("月3回のセッション（90分）"),
+        smartBreakJapanese("24時間優先チャットサポート"),
+        smartBreakJapanese("完全オーダーメイドプログラム"),
+        smartBreakJapanese("継続的なモチベーション管理"),
+        smartBreakJapanese("成果保証制度"),
       ],
       popular: false,
     },
@@ -192,9 +193,9 @@ const ServicesPage: React.FC = () => {
               あなたの"変わりたい"を現実にする
             </p>
             <p
-              className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed"
+              className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed jp-text-optimal text-balance"
               dangerouslySetInnerHTML={{
-                __html: `あなたの目標とライフスタイルに合わせて、<br className="mobile-only-br"/>最適なプランをお選びいただけます。<br className="mobile-only-br"/>継続的なサポートで、確実な変化を実現します。`,
+                __html: smartBreakJapanese(`あなたの目標とライフスタイルに合わせて、最適なプランをお選びいただけます。継続的なサポートで、確実な変化を実現します。`),
               }}
             />
           </motion.div>
@@ -235,7 +236,7 @@ const ServicesPage: React.FC = () => {
             <p
               className="text-lg text-gray-300"
               dangerouslySetInnerHTML={{
-                __html: `あなたの目標と予算に合わせて<br className="mobile-only-br"/>お選びください`,
+                __html: smartBreakJapanese(`あなたの目標と予算に合わせてお選びください`),
               }}
             />
           </div>
@@ -279,9 +280,9 @@ const ServicesPage: React.FC = () => {
                       </span>
                     </div>
                     <p
-                      className="text-gray-300 text-sm sm:text-base"
+                      className="text-gray-300 text-sm sm:text-base jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `継続的な習慣化と<br className="mobile-only-br"/>モチベーション維持のサポート`,
+                        __html: smartBreakJapanese(`継続的な習慣化とモチベーション維持のサポート`),
                       }}
                     />
                   </div>
@@ -292,9 +293,9 @@ const ServicesPage: React.FC = () => {
                       </span>
                     </div>
                     <p
-                      className="text-gray-300 text-sm sm:text-base"
+                      className="text-gray-300 text-sm sm:text-base jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `実践的なセルフマネジメント<br className="mobile-only-br"/>手法の指導`,
+                        __html: smartBreakJapanese(`実践的なセルフマネジメント手法の指導`),
                       }}
                     />
                   </div>
@@ -305,9 +306,9 @@ const ServicesPage: React.FC = () => {
                       </span>
                     </div>
                     <p
-                      className="text-gray-300 text-sm sm:text-base"
+                      className="text-gray-300 text-sm sm:text-base jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `個人の成長目標に合わせた<br className="mobile-only-br"/>カスタマイズ`,
+                        __html: smartBreakJapanese(`個人の成長目標に合わせたカスタマイズ`),
                       }}
                     />
                   </div>
@@ -339,7 +340,7 @@ const ServicesPage: React.FC = () => {
             <p
               className="text-lg text-gray-300"
               dangerouslySetInnerHTML={{
-                __html: `より深いサポートを<br className="mobile-only-br"/>ご希望の方へ`,
+                __html: smartBreakJapanese(`より深いサポートをご希望の方へ`),
               }}
             />
           </div>
@@ -359,9 +360,9 @@ const ServicesPage: React.FC = () => {
                   ボディメイク指導
                 </h3>
                 <p
-                  className="text-[#d4af37] font-medium"
+                  className="text-[#d4af37] font-medium jp-text-optimal leading-relaxed"
                   dangerouslySetInnerHTML={{
-                    __html: `趣味で続けている筋トレの経験を活かした<br className="mobile-only-br"/>実践的なアドバイス`,
+                    __html: smartBreakJapanese(`趣味で続けている筋トレの経験を活かした実践的なアドバイス`),
                   }}
                 />
               </div>
@@ -416,7 +417,7 @@ const ServicesPage: React.FC = () => {
             <p
               className="text-lg text-gray-300"
               dangerouslySetInnerHTML={{
-                __html: `実際にコーチングを受けた方々の<br className="mobile-only-br"/>変化をご紹介`,
+                __html: smartBreakJapanese(`実際にコーチングを受けた方々の変化をご紹介`),
               }}
             />
           </div>
@@ -442,23 +443,27 @@ const ServicesPage: React.FC = () => {
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「自分のことがわかってない」<br className="mobile-only-br"/>「長所が見えない」という<br className="mobile-only-br"/>自己理解の不足。`,
+                        __html: smartBreakJapanese(`•「自分のことがわかってない」「長所が見えない」という自己理解の不足。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>真面目で責任感が強い一方で、<br className="mobile-only-br"/>コミュニケーションに苦手意識があり、<br className="mobile-only-br"/>言葉に詰まることもしばしば。`,
+                        __html: smartBreakJapanese(`•真面目で責任感が強い一方で、コミュニケーションに苦手意識があり、言葉に詰まることもしばしば。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>面接などでは「体力」「継続力」といった<br className="mobile-only-br"/>無難な回答しかできず、<br className="mobile-only-br"/>「しっくりこない」と感じていた。`,
+                        __html: smartBreakJapanese(`•面接などでは「体力」「継続力」といった無難な回答しかできず、「しっくりこない」と感じていた。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「自分にはユーモアがない」という<br className="mobile-only-br"/>リミッティングビリーフに縛られていた。`,
+                        __html: smartBreakJapanese(`•「自分にはユーモアがない」というリミッティングビリーフに縛られていた。`),
                       }}
                     />
                   </ul>
@@ -487,28 +492,33 @@ const ServicesPage: React.FC = () => {
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>野球経験から「仲間を助けたい」という<br className="mobile-only-br"/>他者貢献の本質に気づき、<br className="mobile-only-br"/>自分の強みを再発見。`,
+                        __html: smartBreakJapanese(`•野球経験から「仲間を助けたい」という他者貢献の本質に気づき、自分の強みを再発見。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>心配性＝準備力、慎重さ＝冷静な判断力として<br className="mobile-only-br"/>"短所を長所に再定義"。`,
+                        __html: smartBreakJapanese(`•心配性＝準備力、慎重さ＝冷静な判断力として"短所を長所に再定義"。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「人前で話す」ではなく<br className="mobile-only-br"/>「1対1で堂々と話せるようになりたい」という<br className="mobile-only-br"/>現実的な目標へ軸が変化。`,
+                        __html: smartBreakJapanese(`•「人前で話す」ではなく「1対1で堂々と話せるようになりたい」という現実的な目標へ軸が変化。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「質問力を鍛える」ことの意味に気づき、<br className="mobile-only-br"/>コミュニケーションへの向き合い方が変化。`,
+                        __html: smartBreakJapanese(`•「質問力を鍛える」ことの意味に気づき、コミュニケーションへの向き合い方が変化。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「頼られる存在になりたい」と<br className="mobile-only-br"/>自信を持って語れるように。`,
+                        __html: smartBreakJapanese(`•「頼られる存在になりたい」と自信を持って語れるように。`),
                       }}
                     />
                   </ul>
@@ -527,7 +537,7 @@ const ServicesPage: React.FC = () => {
 
                 <div className="p-4 bg-white/5 border border-white/20 rounded-lg">
                   <h4 className="text-white font-semibold mb-2">現在の様子</h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
                     職場で後輩から相談される場面が増え、自己肯定感が上がっている。自分の"取扱説明書"が分かったことで、人との関係性にも余裕が出てきた。
                   </p>
                 </div>
@@ -536,7 +546,7 @@ const ServicesPage: React.FC = () => {
                   <h4 className="text-[#e53935] font-semibold mb-2">
                     コーチの関わりについて
                   </h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
                     「話を聴くだけじゃなく、思考の奥にある価値観まで一緒に掘ってくれる。あのセッションは宝物です」
                   </p>
                 </div>
@@ -563,13 +573,15 @@ const ServicesPage: React.FC = () => {
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「何となく分かってるつもり」だった思考が、<br className="mobile-only-br"/>実は整理されていなかった。`,
+                        __html: smartBreakJapanese(`•「何となく分かってるつもり」だった思考が、実は整理されていなかった。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>家庭・仕事・自分の今後に対するモヤモヤが重なり、<br className="mobile-only-br"/>優先順位や判断軸が不明確な状態。`,
+                        __html: smartBreakJapanese(`•家庭・仕事・自分の今後に対するモヤモヤが重なり、優先順位や判断軸が不明確な状態。`),
                       }}
                     />
                   </ul>
@@ -598,18 +610,21 @@ const ServicesPage: React.FC = () => {
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「自分を見つめ直す時間は本当に大切だ」と痛感。`,
+                        __html: smartBreakJapanese(`•「自分を見つめ直す時間は本当に大切だ」と痛感。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>長年曖昧だった価値観や方向性が言語化され、<br className="mobile-only-br"/>思考がスッキリ。`,
+                        __html: smartBreakJapanese(`•長年曖昧だった価値観や方向性が言語化され、思考がスッキリ。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>コーチング後、「その日から即実践」と<br className="mobile-only-br"/>行動変容が見られた。`,
+                        __html: smartBreakJapanese(`•コーチング後、「その日から即実践」と行動変容が見られた。`),
                       }}
                     />
                   </ul>
@@ -628,7 +643,7 @@ const ServicesPage: React.FC = () => {
 
                 <div className="p-4 bg-white/5 border border-white/20 rounded-lg">
                   <h4 className="text-white font-semibold mb-2">現在の様子</h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
                     キャリアアップを目指し、試験勉強と行動計画を立てて実践中。変化に驚いた妻からも「本気なんやな」と応援の声。
                   </p>
                 </div>
@@ -637,7 +652,7 @@ const ServicesPage: React.FC = () => {
                   <h4 className="text-[#e53935] font-semibold mb-2">
                     コーチの関わりについて
                   </h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
                     「対話を通じて丁寧に話を深掘ってくれるから、頭が整理されて迷いが消えていく。感覚じゃなく"納得"できたのが良かった」
                   </p>
                 </div>
@@ -664,13 +679,15 @@ const ServicesPage: React.FC = () => {
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>転職を目指すも不採用。<br className="mobile-only-br"/>「年齢的にもう無理かも」という諦めが先行。`,
+                        __html: smartBreakJapanese(`•転職を目指すも不採用。「年齢的にもう無理かも」という諦めが先行。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>住宅ローン、発達障害のある娘の育児、<br className="mobile-only-br"/>人間関係と課題が山積みで、<br className="mobile-only-br"/>どこから動いていいか分からない状態。`,
+                        __html: smartBreakJapanese(`•住宅ローン、発達障害のある娘の育児、人間関係と課題が山積みで、どこから動いていいか分からない状態。`),
                       }}
                     />
                   </ul>
@@ -699,23 +716,27 @@ const ServicesPage: React.FC = () => {
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「強みを活かして人脈を広げる」という<br className="mobile-only-br"/>突破口を発見。`,
+                        __html: smartBreakJapanese(`•「強みを活かして人脈を広げる」という突破口を発見。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>セッション当日に迷っていた採用担当者へ連絡→<br className="mobile-only-br"/>即行動に移し、日程調整まで完了。`,
+                        __html: smartBreakJapanese(`•セッション当日に迷っていた採用担当者へ連絡→即行動に移し、日程調整まで完了。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>「目標を高く設定するだけで、<br className="mobile-only-br"/>考え方も行動もガラッと変わる」と自覚。`,
+                        __html: smartBreakJapanese(`•「目標を高く設定するだけで、考え方も行動もガラッと変わる」と自覚。`),
                       }}
                     />
                     <li
+                      className="jp-text-optimal leading-relaxed"
                       dangerouslySetInnerHTML={{
-                        __html: `•<br className="mobile-only-br"/>家族にもセッション内容を共有し、<br className="mobile-only-br"/>妻からも「ちゃんと考えてるやん」と<br className="mobile-only-br"/>前向きな反応が得られた。`,
+                        __html: smartBreakJapanese(`•家族にもセッション内容を共有し、妻からも「ちゃんと考えてるやん」と前向きな反応が得られた。`),
                       }}
                     />
                   </ul>
@@ -734,7 +755,7 @@ const ServicesPage: React.FC = () => {
 
                 <div className="p-4 bg-white/5 border border-white/20 rounded-lg">
                   <h4 className="text-white font-semibold mb-2">現在の様子</h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
                     転職の選択肢を広げるべく人脈構築を継続中。数人の元同僚との再接触も成功。「また迷ったら頼むわ」と継続的な自己変革に前向き。
                   </p>
                 </div>
@@ -743,7 +764,7 @@ const ServicesPage: React.FC = () => {
                   <h4 className="text-[#e53935] font-semibold mb-2">
                     コーチの関わりについて
                   </h4>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
                     「"やる気出せ"じゃなくて、"こう動けるやろ"って道筋を一緒に作ってくれた。コーチングってこういうことかと実感した」
                   </p>
                 </div>
@@ -780,10 +801,8 @@ const ServicesPage: React.FC = () => {
                 人生を変える第一歩を、今すぐ
               </h3>
 
-              <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
-                フィジーク経験とコーチング技術を組み合わせた
-                <br className="mobile-only-br" />
-                独自のアプローチでサポートします。
+              <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed jp-text-optimal">
+                {smartBreakJapanese(`フィジーク経験とコーチング技術を組み合わせた独自のアプローチでサポートします。`)}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -6,6 +6,7 @@ import SEO from "../components/SEO";
 import { profileStoryContent } from "../constants/profileStory";
 import AnimatedText from "../components/ui/AnimatedText";
 import VisualGuide from "../components/ui/VisualGuide";
+import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const ProfilePage: React.FC = () => {
   const navigate = useNavigate();
@@ -41,6 +42,83 @@ const ProfilePage: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // profileStoryContentをProfilePage.tsx内に直接定義
+  const profileStoryContent = [
+    {
+      type: "paragraph",
+      content: `"偽りの自分"を脱ぎ捨てて──\n\n人生を作品に変える、元公安コーチの物語`,
+      className: "text-center text-xl sm:text-2xl font-semibold text-[#e53935]",
+    },
+    {
+      type: "paragraph",
+      content: `「このままで、本当にいいのか？」──そう問いかけながら、見えない"何か"に、じわじわと首を締められているような感覚。\n\n自分の人生なのに、誰かのレールを歩かされてるような感覚。\n\nもしあなたが、そんな"見えない鎖"に気づき始めているなら──この物語は、あなたのために書きました。`,
+    },
+    {
+      type: "paragraph",
+      content: `はじめまして。矢田谷充則（やたがいみつのり）です。私は、20年間公安警察官として働きながら、ずっと"偽りの自分"を演じ続けていました。\n\nでも今は違う。今は、"自分の人生を、自分でデザインする"という生き方を、全力で選び、全力で生きています。\n\nここでは、そんな私が"どうやって自分を取り戻してきたか"を、本音でお話しします。`,
+    },
+    {
+      type: "heading",
+      level: 3,
+      content: '【1】"強くなれ"の呪縛：誰かの期待に応え続けた幼少期',
+    },
+    {
+      type: "paragraph",
+      content: `4歳で空手を始めたのは、自分の意志ではありませんでした。兄の影響、親の期待、"強くなれ"の言葉。\n\n勝てば褒められる。負ければ叱られる。"喜ばれるために頑張る"ことが、いつの間にか人生のベースになっていました。\n\n小5の全国大会。チームは優勝。でも俺だけ1勝もしていない。「これ、俺じゃなくてもよかったんちゃうか？」\n\nそのとき初めて、自分という存在の"薄さ"を感じたんです。「頑張ってるのに、心が満たされない」そんな違和感が、胸の奥にずっと残り続けました。`,
+    },
+    {
+      type: "heading",
+      level: 3,
+      content: '【2】"やらされる人生"から、"選ぶ人生"へ',
+    },
+    {
+      type: "paragraph",
+      content: `中学卒業と同時に、空手を辞めた。それは、人生で初めて"自分の意思で選んだ別れ"でした。\n\nそこから一気に広がった自由。でも同時に、自分が空っぽであることにも気づかされました。\n\nそんなとき出会ったのが、ブレイクダンス。「これや！めちゃくちゃかっこええ！」自分の意思で、音に合わせて動く。誰の評価も関係ない。"生きてる感覚"が、一気に身体に流れ込んできました。\n\nロサンゼルスへの留学で見た、"自由を誇る人間たち"の姿。「表現していいんや、自分を出していいんや」と、深く刻まれた瞬間でした。`,
+    },
+    {
+      type: "heading",
+      level: 3,
+      content: '【3】再びの仮面：公安警察という"静かな牢獄"',
+    },
+    {
+      type: "paragraph",
+      content: `大学を出て警察官になった私は、再び仮面をかぶり始めました。特に公安という世界は、"目立たないこと"「空気になること」が求められる組織。\n\n目立たないように、失敗しないように、波風立てないように。自分を押し殺すことが、プロとしての"正解"とされていた。\n\nでも俺の本質は、表現者。目立ちたがりで、自分を出したい人間。\n\n心のどこかで、ずっと叫び続けていたんです。「このまま人生終わらせてええんか？」「俺って、誰やねん？」\n\nその"叫び"は、年を追うごとに大きくなっていきました。`,
+    },
+    {
+      type: "heading",
+      level: 3,
+      content: '【4】コーチングとの出会い：隠していた"本音"に火がついた',
+    },
+    {
+      type: "paragraph",
+      content: `ある日、コーチングセッションを受けました。たった一つの問いで、頭が真っ白になった。\n\n「で、あなたは本当はどうしたいんですか？」\n\n答えられなかった。自分の本音が、どこにあるのかすら分からなかった。\n\nその瞬間、すべての仮面が揺らぎました。──あぁ、俺、ずっと無理してたんや。\n\n本当は、もっと自分らしく、もっと自由に生きたかったんや。\n\nそう気づいた瞬間、20年間の"安定"が、鎖に見えた。`,
+    },
+    {
+      type: "heading",
+      level: 3,
+      content: "【5】鬱という脱皮：止まったことで、始まった人生",
+    },
+    {
+      type: "paragraph",
+      content: `気づけば、心が悲鳴を上げていました。仕事中、動悸が止まらない。笑えない。眠れない。\n\n「でも、ようやく止まれる」──そう思った自分もいました。\n\nそれから私は、警察を辞める決意をします。退職金も、年金も、安定も、すべてを手放して。\n\nでも、心はずっと軽くなった。「やっと、自分の人生が始まる」と感じました。`,
+    },
+    {
+      type: "heading",
+      level: 3,
+      content: '【6】人生を"作品"に変える──それが、俺のミッション',
+    },
+    {
+      type: "paragraph",
+      content: `鬱になったことも、過去の仮面も、全部"ネタ"にできる。それが、俺の"ブランディング思考"の原点。\n\n痛みを隠すんじゃない。語り直せば、それは誰かの希望になる。\n\n公安警察で培った"洞察力"「分析力」「限界突破力」全部、今では"誰かの人生を動かす武器"に変わった。\n\nだから、俺の使命は一つだけ。\n\n▶︎ あなたの人生を、"作品"にしよう。今までずっと、"誰かの期待"で生きてきたあなたへ。`,
+      className: "font-bold",
+    },
+    {
+      type: "paragraph",
+      content: `もう、仮面はいらない。自分の人生を、自分の言葉で語り直していい。\n\nそれが、"本当のスタートライン"や。\n\n▶︎ 初回無料セッションはこちらから。あなたの物語の"本音"を、一緒に見つけに行こう。`,
+      className: "font-bold",
+    },
+  ];
 
   return (
     <>
@@ -129,8 +207,11 @@ const ProfilePage: React.FC = () => {
           <div className="max-w-sm sm:max-w-md mx-auto mb-8 sm:mb-10 p-4 sm:p-6 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-left border-l-[5px] border-[#e53935] text-sm sm:text-base">
             {basicProfile.map((line, index) => (
               <React.Fragment key={index}>
-                {line}
-                {index < basicProfile.length - 1 && <br />}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: smartBreakJapanese(line, 25),
+                  }}
+                />
               </React.Fragment>
             ))}
           </div>
@@ -147,32 +228,87 @@ const ProfilePage: React.FC = () => {
                     GCS認定コーチ
                   </h2>
                   <p className="text-gray-300 text-sm">
-                    銀座コーチングスクール認定資格
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: smartBreakJapanese(
+                          "銀座コーチングスクール認定資格",
+                          25
+                        ),
+                      }}
+                    />
                   </p>
                 </div>
               </div>
 
-              <div className="space-y-3 text-sm sm:text-base text-gray-300">
+              <div className="space-y-3 text-sm sm:text-base text-gray-300 leading-normal">
                 <p>
                   <strong className="text-[#d4af37]">
                     銀座コーチングスクール
                   </strong>
-                  でコーチングの基礎から実践まで体系的に学び、
-                  認定コーチとしての資格を取得しました。
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: smartBreakJapanese(
+                        "でコーチングの基礎から実践まで体系的に学び、認定コーチとしての資格を取得しました。",
+                        25
+                      ),
+                    }}
+                  />
                 </p>
                 <p>
-                  GCSは日本最大級のコーチングスクールとして知られ、厳格な認定基準をクリアしたコーチのみが
-                  認定コーチとして活動できます。
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: smartBreakJapanese(
+                        "GCSは日本最大級のコーチングスクールとして知られ、厳格な認定基準をクリアしたコーチのみが認定コーチとして活動できます。",
+                        25
+                      ),
+                    }}
+                  />
                 </p>
                 <div className="mt-4 p-3 bg-white/10 rounded-lg border-l-4 border-[#d4af37]">
                   <p className="text-[#d4af37] font-semibold text-sm mb-1">
                     認定コーチとしての強み
                   </p>
-                  <ul className="text-gray-300 text-sm space-y-1">
-                    <li>• 体系的で実践的なコーチングスキル</li>
-                    <li>• 継続的な学習とスキルアップ</li>
-                    <li>• 厳格な認定基準をクリアした信頼性</li>
-                    <li>• 日本最大級スクールのネットワーク</li>
+                  <ul className="text-gray-300 text-sm space-y-1 leading-normal">
+                    <li>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: smartBreakJapanese(
+                            "• 体系的で実践的なコーチングスキル",
+                            25
+                          ),
+                        }}
+                      />
+                    </li>
+                    <li>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: smartBreakJapanese(
+                            "• 継続的な学習とスキルアップ",
+                            25
+                          ),
+                        }}
+                      />
+                    </li>
+                    <li>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: smartBreakJapanese(
+                            "• 厳格な認定基準をクリアした信頼性",
+                            25
+                          ),
+                        }}
+                      />
+                    </li>
+                    <li>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: smartBreakJapanese(
+                            "• 日本最大級スクールのネットワーク",
+                            25
+                          ),
+                        }}
+                      />
+                    </li>
                   </ul>
                 </div>
                 <div className="mt-4 text-center">
@@ -191,12 +327,12 @@ const ProfilePage: React.FC = () => {
           </section>
 
           {/* My Story セクション */}
-          <section className="max-w-4xl mx-auto px-4 sm:px-5 relative z-10">
+          <section className="max-w-4xl mx-auto px-4 sm:px-5 relative z-10 jp-text-optimal text-balance">
             {/* タイトルのみ大きく表示 */}
             <p
               className="text-center text-2xl sm:text-3xl font-bold text-[#d4af37] mb-10"
               dangerouslySetInnerHTML={{
-                __html: profileStoryContent[0].content,
+                __html: smartBreakJapanese(profileStoryContent[0].content, 25),
               }}
             />
             {/* headingごとにグループ化して四角で囲む */}
@@ -229,21 +365,25 @@ const ProfilePage: React.FC = () => {
                         return (
                           <motion.h3
                             key={i}
-                            className="text-xl sm:text-2xl font-bold text-[#d4af37] mt-2 mb-4"
+                            className="text-xl sm:text-2xl font-bold text-[#d4af37] mt-2 mb-4 leading-normal"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: i * 0.05 }}
                             viewport={{ once: true }}
                           >
-                            {item.content}
+                            {smartBreakJapanese(item.content, 25)}
                           </motion.h3>
                         );
                       }
                       return (
                         <motion.p
                           key={i}
-                          className={item.className ? item.className : ""}
-                          dangerouslySetInnerHTML={{ __html: item.content }}
+                          className={`${
+                            item.className ? item.className : ""
+                          } text-sm leading-normal`}
+                          dangerouslySetInnerHTML={{
+                            __html: smartBreakJapanese(item.content, 25),
+                          }}
                           initial={{ opacity: 0, y: 30 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.7, delay: i * 0.05 }}

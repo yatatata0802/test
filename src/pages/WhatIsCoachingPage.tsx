@@ -5,6 +5,7 @@ import { Home, ArrowUp, Target, Eye, Zap, Users } from "lucide-react";
 import VisualGuide from "../components/ui/VisualGuide";
 import ParticleBackground from "../components/ParticleBackground";
 import SEO from "../components/SEO";
+import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const WhatIsCoachingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -14,51 +15,28 @@ const WhatIsCoachingPage: React.FC = () => {
       title: "コーチングとは",
       icon: Target,
       content: [
-        `コーチングとは、<br class="mobile-only-br"/>自分の中にある"本音"を引き出す対話の技術です。`,
-        "",
-        `本当は、気づいてるはずなんです。<br class="mobile-only-br"/>このままじゃ、何か違うって。`,
-        `でも、どう変えればいいのかは、<br class="mobile-only-br"/>自分でもわからない。`,
-        `その"もやもや"を、<br class="mobile-only-br"/>ちゃんと形にしていくのがコーチングです。`,
+        `コーチングとは、自分の中にある"本音"を引き出す対話の技術です。\n\n本当は気づいているはずなんです。このままじゃ、何か違うって。\nでも、どう変えればいいのかは自分でもわからない。\nその"もやもや"を、ちゃんと形にしていくのがコーチングです。`,
       ],
     },
     {
       title: "コンサルとの違い",
       icon: Eye,
       content: [
-        "コンサルは、やり方や答えを与えてくれます。",
-        "でも、コーチングは問いかけます。",
-        "",
-        "「正解」より、「本音」。",
-        `「こうすべき」より、<br class="mobile-only-br"/>「どうしたい？」`,
-        "",
-        "主役は、いつだってあなた自身。",
-        `他人の人生じゃなく、<br class="mobile-only-br"/>"自分の人生"を取り戻すプロセス。`,
+        `コンサルは、やり方や答えを与えてくれます。\nでも、コーチングは問いかけます。\n\n「正解」より、「本音」。\n「こうすべき」より、「どうしたい？」\n\n主役は、いつだってあなた自身。\n他人の人生じゃなく、"自分の人生"を取り戻すプロセス。`,
       ],
     },
     {
       title: "コーチングを受けると、どうなる？",
       icon: Zap,
       content: [
-        `「ほんまは、こう生きたかったんや」って、<br class="mobile-only-br"/>自分の本音に気づけるようになる。`,
-        "",
-        `自己理解が深まり、<br class="mobile-only-br"/>なぜしんどかったのか、<br class="mobile-only-br"/>どう生きたいのかが、ハッキリしてくる。`,
-        "",
-        `ゴールが明確になり、<br class="mobile-only-br"/>行動が加速する。`,
-        "",
-        `成長が習慣化し、<br class="mobile-only-br"/>淡々と前に進める自分になってる。`,
+        `「ほんまは、こう生きたかったんや」って、自分の本音に気づけるようになる。\n\n自己理解が深まり、なぜしんどかったのか、どう生きたいのかが、ハッキリしてくる。\n\nゴールが明確になり、行動が加速する。\n\n成長が習慣化し、淡々と前に進める自分になってる。`,
       ],
     },
     {
       title: "最後に",
       icon: Users,
       content: [
-        "🔥 このまま終わらせますか？",
-        "",
-        `毎日同じことを繰り返して、<br class="mobile-only-br"/>「こんなはずじゃなかった」と<br class="mobile-only-br"/>後悔する人生を。`,
-        "",
-        `それとも、今すぐ行動を起こして、<br class="mobile-only-br"/>「やっぱりやってよかった」と<br class="mobile-only-br"/>言える人生を選びますか？`,
-        "",
-        `⏰ 人生を変えるタイミングは、<br class="mobile-only-br"/>いつだって「今」。`,
+        `🔥 このまま終わらせますか？\n\n毎日同じことを繰り返して、「こんなはずじゃなかった」と後悔する人生を。\n\nそれとも、今すぐ行動を起こして、「やっぱりやってよかった」と言える人生を選びますか？\n\n⏰ 人生を変えるタイミングは、いつだって「今」。`,
       ],
     },
   ];
@@ -149,7 +127,7 @@ const WhatIsCoachingPage: React.FC = () => {
               </VisualGuide>
 
               <motion.div
-                className="text-lg text-gray-200 leading-relaxed space-y-4 md:text-base text-center max-w-xl mx-auto"
+                className="text-sm text-gray-200 leading-normal space-y-4 md:text-base text-center max-w-xs mx-auto jp-text-optimal"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: index * 0.2 + 0.3, duration: 0.8 }}
@@ -169,7 +147,9 @@ const WhatIsCoachingPage: React.FC = () => {
                       delay: index * 0.2 + lineIndex * 0.1,
                       duration: 0.5,
                     }}
-                    dangerouslySetInnerHTML={{ __html: line }}
+                    dangerouslySetInnerHTML={{
+                      __html: smartBreakJapanese(line, 25),
+                    }}
                   />
                 ))}
               </motion.div>

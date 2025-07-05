@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
+
 import Header from "./components/Header";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
@@ -13,7 +13,7 @@ import FloatingSocial from "./components/ui/FloatingSocial";
 
 function App() {
   return (
-    <HelmetProvider>
+    <>
       <ScrollToTop />
       <div className="w-full min-h-screen bg-[#0a0a0a] text-white font-sans">
         <Routes>
@@ -70,7 +70,7 @@ function App() {
           />
         </Routes>
       </div>
-    </HelmetProvider>
+    </>
   );
 }
 

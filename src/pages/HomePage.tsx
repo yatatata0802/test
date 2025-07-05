@@ -17,6 +17,7 @@ import VisualGuide from "../components/ui/VisualGuide";
 import MobileOptimizedButton from "../components/ui/MobileOptimizedButton";
 import OptimizedCTA from "../components/ui/OptimizedCTA";
 import SEO from "../components/SEO";
+import { smartBreakJapanese } from "../smartBreakJapanese";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,19 +77,19 @@ const HomePage: React.FC = () => {
   const supportTargets = [
     {
       text: "「このままじゃダメだ」と悩み、動き出せない方",
-      description: "頭では分かってるのに、なぜか行動できない状態から脱出",
+      description: smartBreakJapanese("頭では分かってるのに、なぜか行動できない状態から脱出"),
     },
     {
       text: "「もっと強くなりたい」と、新しい挑戦をしたい方",
-      description: "現状に満足せず、さらなる高みを目指したい向上心ある方",
+      description: smartBreakJapanese("現状に満足せず、さらなる高みを目指したい向上心ある方"),
     },
     {
       text: "モチベーションが続かず、三日坊主で終わってしまう方",
-      description: "やる気はあるのに継続できない悩みを根本から解決",
+      description: smartBreakJapanese("やる気はあるのに継続できない悩みを根本から解決"),
     },
     {
       text: "目標達成のために自己管理能力を磨きたい方",
-      description: "時間・感情・習慣を統合的に管理する力を身につける",
+      description: smartBreakJapanese("時間・感情・習慣を統合的に管理する力を身につける"),
     },
   ];
 
@@ -139,18 +140,14 @@ const HomePage: React.FC = () => {
               transition={{ delay: 1.5, duration: 1 }}
               className="text-base sm:text-lg md:text-xl leading-relaxed space-y-3 sm:space-y-4 px-2 mb-8"
             >
-              <p>"このままの自分でいいのか？"と問い続けているあなたへ</p>
+              <p className="jp-text-optimal text-balance">{smartBreakJapanese(`"このまま"で、本当にいいのか？──と問い続けるあなたへ。`)}</p>
               <VisualGuide type="glow-border" delay={2.5}>
                 <p className="text-xl sm:text-2xl font-bold text-[#d4af37]">
                   "なりたい自分"を夢で終わらせない。
                 </p>
               </VisualGuide>
               <p>今の自分にモヤモヤしてるなら──</p>
-              <p>
-                心と身体の両面から、
-                <br className="mobile-only-br" />
-                "なりたい自分"に火をつける。
-              </p>
+              <p>{smartBreakJapanese(`心と身体の両面から、"なりたい自分"に火をつける。`)}</p>
             </motion.div>
           </motion.div>
         </section>
@@ -182,60 +179,13 @@ const HomePage: React.FC = () => {
 
                 <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                   <div className="mt-8 space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
-                    <p>
-                      20年間、公安警察として
-                      <br className="mobile-only-br" />
-                      "仮面の人生"を生きてきました。
-                      <br className="mobile-only-br" />
-                      自分を押し殺し、
-                      <br className="mobile-only-br" />
-                      「安定」と「期待」に応え続ける日々。
-                      <br className="mobile-only-br" />
-                      でも心の奥ではずっと、
-                      <br className="mobile-only-br" />
-                      「このままでいいのか？」という声が
-                      <br className="mobile-only-br" />
-                      消えませんでした。
-                    </p>
-                    <p>
-                      本当は、もっと自由に、
-                      <br className="mobile-only-br" />
-                      自分らしく生きたい──。
-                      <br className="mobile-only-br" />
-                      そんな想いに気づいたとき、
-                      <br className="mobile-only-br" />
-                      心と身体は限界を超えていた。
-                      <br className="mobile-only-br" />
-                      でも今振り返れば、
-                      <br className="mobile-only-br" />
-                      それは「壊れた」のではなく、
-                      <br className="mobile-only-br" />
-                      「脱皮」だった。
-                      <br className="mobile-only-br" />
-                      あのどん底を越えたからこそ、
-                      <br className="mobile-only-br" />
-                      今の"ブランディング思考"を
-                      <br className="mobile-only-br" />
-                      手に入れたんです。
-                    </p>
-                    <p>
-                      今は、筋トレや格闘技を通じて
-                      <br className="mobile-only-br" />
-                      理想の自分を体現しながら、
-                      <br className="mobile-only-br" />
-                      「人生を作品として生きる」人を
-                      <br className="mobile-only-br" />
-                      増やす活動をしています。
-                    </p>
-                    <p>
-                      あなたの"本当の物語"を、
-                      <br className="mobile-only-br" />
-                      一緒にデザインしませんか？
-                      <br className="mobile-only-br" />
-                      ──これは、あなただけの人生を取り戻す
-                      <br className="mobile-only-br" />
-                      「最初のページ」です。
-                    </p>
+                    <p>{smartBreakJapanese(`20年間、公安警察官として生きてきた私は、常に"仮面"を被り、自分を押し殺してきました。「安定」と「期待」に応え続ける日々の中で、心の奥底ではずっと、「このままで、本当にいいのか？」という問いが消えませんでした。`)}</p>
+                    <p></p>
+                    <p>{smartBreakJapanese(`もっと自由に、自分らしく生きたい──。その強い想いに気づいたとき、心身は限界を迎えました。しかし、それは「壊れた」のではなく、「脱皮」だったのです。あのどん底を乗り越えたからこそ、私は独自の"ブランディング思考"を手に入れました。`)}</p>
+                    <p></p>
+                    <p>{smartBreakJapanese(`今、私は自身の「挑戦」の象徴として、筋トレや格闘技を通じて理想の自分を体現しています。そして、そこで培った「継続力」や「自己変革」の経験を活かし、「人生を作品として生きる」人を増やす活動に情熱を注いでいます。`)}</p>
+                    <p></p>
+                    <p>{smartBreakJapanese(`さあ、あなたの"本当の物語"を、私と一緒にデザインしませんか？──これは、あなただけの人生を取り戻す、記念すべき「最初のページ」です。`)}</p>
                   </div>
                 </div>
 
@@ -290,7 +240,7 @@ const HomePage: React.FC = () => {
                         <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
                           {target.text}
                         </h3>
-                        <p className="text-sm sm:text-base text-gray-400">
+                        <p className="text-sm sm:text-base text-gray-400 jp-text-optimal leading-relaxed">
                           {target.description}
                         </p>
                       </div>
@@ -335,8 +285,8 @@ const HomePage: React.FC = () => {
               </div>
 
               <VisualGuide type="glow-border" delay={0.5}>
-                <div className="text-[#d4af37] font-semibold mb-4 sm:mb-6 text-lg sm:text-xl bg-[#d4af37]/10 p-4 rounded-lg text-center">
-                  得意なサポート
+                <div className="text-[#d4af37] font-semibold mb-4 sm:mb-6 text-lg sm:text-xl bg-[#d4af37]/10 p-4 rounded-lg text-center jp-text-optimal text-balance">
+                  あなたの「変わりたい」を、具体的な「行動」へ。
                 </div>
               </VisualGuide>
 
@@ -345,18 +295,18 @@ const HomePage: React.FC = () => {
                   {
                     title: "行動変容支援：",
                     description:
-                      "「変わりたい」を行動に繋げ、一歩踏み出す勇気を引き出します。",
+                      smartBreakJapanese("「変わりたい」という漠然とした想いを、具体的な行動へと繋げ、着実に未来を切り拓く勇気を引き出します。"),
                     color: "#e53935",
                   },
                   {
                     title: "自己管理強化：",
-                    description: "目標達成に不可欠な「継続する力」を育てます。",
+                    description: smartBreakJapanese("目標達成に不可欠な「継続する力」を、あなたのライフスタイルに合わせて最適化。揺るぎない習慣を構築します。"),
                     color: "#d4af37",
                   },
                   {
                     title: "心と身体のサポート：",
                     description:
-                      "筋トレや運動を通じて得た継続のコツを活かし、心身のバランスを整えるサポートをします。",
+                      smartBreakJapanese("筋トレや格闘技で培った経験を活かし、心身のバランスを整え、内面から輝く「魅せる自分」を創造します。"),
                     color: "#ffd700",
                   },
                 ].map((item, index) => (
@@ -436,16 +386,14 @@ const HomePage: React.FC = () => {
 
                 <VisualGuide type="pulse-dot" className="mx-auto mb-4" />
 
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4af37] mb-6 sm:mb-8">
-                  さあ、はじめの一歩を。
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#d4af37] mb-6 sm:mb-8 jp-text-optimal text-balance">
+                  さあ、あなたの人生を"覚醒"させよう。
                 </h3>
 
                 <VisualGuide type="glow-border" delay={0.5}>
                   <div className="bg-black/30 p-6 sm:p-8 rounded-lg mb-8 sm:mb-10">
-                    <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-                      筋トレや運動を通じて得た継続のコツと
-                      <br className="mobile-only-br" />
-                      コーチング技術を組み合わせた独自のアプローチでサポートします。
+                    <p className="text-lg sm:text-xl text-gray-300 leading-relaxed jp-text-optimal text-balance">
+                      {smartBreakJapanese(`公安警察官として培った「洞察力」と「問題解決能力」。そして、筋トレや格闘技で得た「継続力」と「自己変革」の経験。これらを融合した独自のアプローチで、あなたの人生を力強くサポートします。`)}
                     </p>
                   </div>
                 </VisualGuide>
@@ -458,7 +406,7 @@ const HomePage: React.FC = () => {
                     urgency="⏰ 今月限定3名様"
                     socialProof="初回セッション完全無料"
                   >
-                    無料で人生を変える第一歩を踏み出す
+                    無料で人生を覚醒させる第一歩を踏み出す
                   </OptimizedCTA>
                 </div>
 

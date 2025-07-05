@@ -12,6 +12,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import SEO from "../components/SEO";
+import { smartBreakJapanese } from "../smartBreakJapanese";
 
 interface FormData {
   name: string;
@@ -43,16 +44,16 @@ const ContactPage: React.FC = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, text: "coaching@yatagai.com" },
-    { icon: MapPin, text: "大阪府大阪市（オンライン対応可）" },
-    { icon: Clock, text: "平日 9:00-21:00 / 土日 10:00-18:00" },
+    { icon: Mail, text: smartBreakJapanese("coaching@yatagai.com") },
+    { icon: MapPin, text: smartBreakJapanese("大阪府大阪市（オンライン対応可）") },
+    { icon: Clock, text: smartBreakJapanese("平日 9:00-21:00 / 土日 10:00-18:00") },
   ];
 
   const assurances = [
-    "無理な勧誘は一切いたしません",
-    "ご相談内容・個人情報は秘密厳守",
-    "初回体験セッションは完全無料",
-    "24時間以内に必ずご返信",
+    smartBreakJapanese("無理な勧誘は一切いたしません"),
+    smartBreakJapanese("ご相談内容・個人情報は秘密厳守"),
+    smartBreakJapanese("初回体験セッションは完全無料"),
+    smartBreakJapanese("24時間以内に必ずご返信"),
   ];
 
   const scrollToTop = () => {
@@ -73,13 +74,11 @@ const ContactPage: React.FC = () => {
             CONTACT
           </h1>
           <div className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-2">
-            あなたの"変わりたい"を
-            <br />
-            ここから。
+            {smartBreakJapanese(`あなたの"変わりたい"をここから。`)}
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 jp-text-optimal text-balance">
           {/* お問い合わせフォーム - スマホ最適化 */}
           <div className="p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-[#d4af37]/20 rounded-2xl hover:border-[#d4af37]/40">
             {isSubmitted ? (
@@ -94,9 +93,7 @@ const ContactPage: React.FC = () => {
                   ありがとうございます！
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                  お問い合わせを受け付けました。
-                  <br />
-                  24時間以内にご返信いたします。
+                  {smartBreakJapanese(`お問い合わせを受け付けました。24時間以内にご返信いたします。`)}
                 </p>
               </motion.div>
             ) : (
@@ -193,7 +190,7 @@ const ContactPage: React.FC = () => {
                         className="text-[#d4af37] mr-3 sm:mr-4 flex-shrink-0"
                         size={16}
                       />
-                      <span>{info.text}</span>
+                      <span className="jp-text-optimal leading-relaxed">{info.text}</span>
                     </div>
                   );
                 })}
@@ -212,7 +209,7 @@ const ContactPage: React.FC = () => {
                       className="text-[#d4af37] mr-3 mt-1 flex-shrink-0"
                       size={12}
                     />
-                    <span className="text-sm sm:text-base">{assurance}</span>
+                    <span className="text-sm sm:text-base jp-text-optimal leading-relaxed">{assurance}</span>
                   </div>
                 ))}
               </div>
@@ -223,9 +220,7 @@ const ContactPage: React.FC = () => {
                 今すぐ行動を起こしませんか？
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                人生を変える最初の一歩は、
-                <br />
-                このフォームを送信することから始まります。
+                {smartBreakJapanese(`人生を変える最初の一歩は、このフォームを送信することから始まります。`)}
               </p>
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#d4af37]">
                 あなたの物語は、まだ途中だ。
@@ -235,10 +230,8 @@ const ContactPage: React.FC = () => {
         </div>
 
         <div className="p-6 sm:p-8 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-center mt-12 sm:mt-16">
-          <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
-            一人で悩まず、まずは話してみませんか？
-            <br />
-            あなたの"変わりたい"という気持ちを、全力でサポートします。
+          <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed jp-text-optimal">
+            {smartBreakJapanese(`一人で悩まず、まずは話してみませんか？あなたの"変わりたい"という気持ちを、全力でサポートします。`)}
           </p>
         </div>
 

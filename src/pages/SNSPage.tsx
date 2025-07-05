@@ -32,13 +32,13 @@ const SNSPage: React.FC = () => {
       url: "https://youtube.com/@yatagai_coaching",
       followers: "1.2K",
       description:
-        "まずはYouTubeチャンネル登録がおすすめです！私の人柄や考え方が一番わかります",
+        smartBreakJapanese("まずはYouTubeチャンネル登録がおすすめです！私の人柄や考え方が一番わかります"),
       content: "セルフマネジメント・ライフスタイル・コーチング動画を配信",
       features: [
-        "週2回の動画更新",
-        "実践的なコーチング技術",
-        "筋トレ・ボディメイク指導",
-        "Q&Aライブ配信",
+        smartBreakJapanese("週2回の動画更新"),
+        smartBreakJapanese("実践的なコーチング技術"),
+        smartBreakJapanese("筋トレ・ボディメイク指導"),
+        smartBreakJapanese("Q&Aライブ配信"),
       ],
       stats: [
         { label: "登録者数", value: "1,200+" },
@@ -56,13 +56,13 @@ const SNSPage: React.FC = () => {
       url: "https://instagram.com/yatagai_coaching",
       followers: "2.8K",
       description:
-        "日々の気づきやライフスタイル、ビフォーアフターをシェアしています",
+        smartBreakJapanese("日々の気づきやライフスタイル、ビフォーアフターをシェアしています"),
       content: "日常・ライフスタイル・セルフマネジメント投稿",
       features: [
-        "毎日のストーリー更新",
-        "ライフスタイル動画・写真",
-        "ライフスタイル投稿",
-        "フォロワーとの交流",
+        smartBreakJapanese("毎日のストーリー更新"),
+        smartBreakJapanese("ライフスタイル動画・写真"),
+        smartBreakJapanese("ライフスタイル投稿"),
+        smartBreakJapanese("フォロワーとの交流"),
       ],
       stats: [
         { label: "フォロワー", value: "2,800+" },
@@ -79,13 +79,13 @@ const SNSPage: React.FC = () => {
       handle: "@yatagai_coaching",
       url: "https://twitter.com/yatagai_coaching",
       followers: "1.5K",
-      description: "コーチングのヒントや考察、日々の気づきをリアルタイムで発信",
+      description: smartBreakJapanese("コーチングのヒントや考察、日々の気づきをリアルタイムで発信"),
       content: "コーチング理論・考察・日常のつぶやき",
       features: [
-        "毎日のツイート",
-        "コーチング理論解説",
-        "フォロワーとの対話",
-        "リアルタイム情報発信",
+        smartBreakJapanese("毎日のツイート"),
+        smartBreakJapanese("コーチング理論解説"),
+        smartBreakJapanese("フォロワーとの対話"),
+        smartBreakJapanese("リアルタイム情報発信"),
       ],
       stats: [
         { label: "フォロワー", value: "1,500+" },
@@ -103,13 +103,13 @@ const SNSPage: React.FC = () => {
       url: "https://line.me/ti/p/@yatagai_coaching",
       followers: "800+",
       description:
-        "気軽にメッセージをお送りください。個別相談も受け付けています",
+        smartBreakJapanese("気軽にメッセージをお送りください。個別相談も受け付けています"),
       content: "個別メッセージ・相談受付・限定情報配信",
       features: [
-        "個別メッセージ対応",
-        "限定コンテンツ配信",
-        "相談受付",
-        "セミナー情報優先配信",
+        smartBreakJapanese("個別メッセージ対応"),
+        smartBreakJapanese("限定コンテンツ配信"),
+        smartBreakJapanese("相談受付"),
+        smartBreakJapanese("セミナー情報優先配信"),
       ],
       stats: [
         { label: "友だち数", value: "800+" },
@@ -124,25 +124,25 @@ const SNSPage: React.FC = () => {
   const contentTypes = [
     {
       title: "コーチング理論",
-      description: "実践的なコーチング技術や心理学的アプローチを解説",
+      description: smartBreakJapanese("実践的なコーチング技術や心理学的アプローチを解説"),
       platforms: ["YouTube", "Twitter"],
       icon: TrendingUp,
     },
     {
       title: "ライフスタイル・セルフマネジメント",
-      description: "継続的な習慣化と自己管理の実践方法を解説",
+      description: smartBreakJapanese("継続的な習慣化と自己管理の実践方法を解説"),
       platforms: ["YouTube", "Instagram"],
       icon: Heart,
     },
     {
       title: "日常・ライフスタイル",
-      description: "日々の気づきや習慣、プライベートな一面も",
+      description: smartBreakJapanese("日々の気づきや習慣、プライベートな一面も"),
       platforms: ["Instagram", "Twitter"],
       icon: MessageSquare,
     },
     {
       title: "個別サポート",
-      description: "直接的な相談やコミュニケーション",
+      description: smartBreakJapanese("直接的な相談やコミュニケーション"),
       platforms: ["LINE"],
       icon: Users,
     },
@@ -186,10 +186,8 @@ const SNSPage: React.FC = () => {
               日々の気づきとコーチングのヒント
             </p>
 
-            <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              各SNSプラットフォームで、コーチングに関する情報や
-              <br />
-              日々の気づき、ライフスタイルについて発信しています
+            <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto jp-text-optimal text-balance">
+              {smartBreakJapanese(`各SNSプラットフォームで、コーチングに関する情報や日々の気づき、ライフスタイルについて発信しています`)}
             </p>
           </motion.div>
         </section>
@@ -257,7 +255,7 @@ const SNSPage: React.FC = () => {
                         </div>
                       </div>
 
-                      <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                      <p className="text-xl text-gray-300 leading-relaxed mb-6 jp-text-optimal">
                         {sns.description}
                       </p>
 
@@ -370,7 +368,7 @@ const SNSPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <p className="text-gray-300 leading-relaxed mb-4 text-sm">
+                    <p className="text-gray-300 leading-relaxed mb-4 text-sm jp-text-optimal">
                       {sns.description}
                     </p>
 
@@ -433,7 +431,7 @@ const SNSPage: React.FC = () => {
                     </h3>
                   </div>
 
-                  <p className="text-gray-300 leading-relaxed mb-4">
+                  <p className="text-gray-300 leading-relaxed mb-4 jp-text-optimal">
                     {content.description}
                   </p>
 
@@ -469,9 +467,7 @@ const SNSPage: React.FC = () => {
               </h3>
 
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                SNSでの情報発信を通じて、多くの方と繋がり、
-                <br />
-                共に成長していけることを楽しみにしています
+                {smartBreakJapanese(`SNSでの情報発信を通じて、多くの方と繋がり、共に成長していけることを楽しみにしています`)}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

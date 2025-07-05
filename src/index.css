@@ -77,8 +77,16 @@
     white-space: nowrap;
   }
 
+  .no-wrap {
+    white-space: nowrap;
+  }
+
   .text-break-words {
     word-break: break-word;
+  }
+
+  .text-balance {
+    text-wrap: balance;
   }
 
   /* 日本語テキスト最適化 */

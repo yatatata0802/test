@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import ParticleBackground from "../components/ParticleBackground";
 import TypewriterText from "../components/TypewriterText";
+import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -40,8 +41,8 @@ const LandingPage: React.FC = () => {
     });
   };
 
-  const titleText = `このまま
-終わっていいの？`;
+  const titleText = smartBreakJapanese(`このまま
+終わっていいの？`);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#0a0a0a] mobile-safe-area">
@@ -142,9 +143,9 @@ const LandingPage: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 5.5, duration: 1 }}
-          className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-12 max-w-2xl leading-relaxed px-4"
+          className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-12 max-w-2xl leading-relaxed px-4 jp-text-optimal text-balance"
         >
-          <p className="whitespace-nowrap">「こんなはずじゃない」って、</p>
+          <p>{smartBreakJapanese(`「こんなはずじゃない」って、`)}</p>
           <p>気づいてるはずだ。</p>
         </motion.div>
 

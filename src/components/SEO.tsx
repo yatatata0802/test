@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+
 
 interface SEOProps {
   title: string;
@@ -102,7 +102,7 @@ const SEO: React.FC<SEOProps> = ({
   };
 
   return (
-    <Helmet>
+    <>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -136,7 +136,7 @@ const SEO: React.FC<SEOProps> = ({
 
       {/* Structured Data */}
       <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
-    </Helmet>
+    </>
   );
 };
 
