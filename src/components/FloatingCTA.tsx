@@ -28,15 +28,6 @@ const FloatingCTA: React.FC = () => {
             <div className="absolute inset-0 rounded-full bg-[#d4af37] opacity-30 animate-ping animation-delay-75"></div>
             <div className="absolute inset-0 rounded-full bg-[#e53935] opacity-15 animate-ping animation-delay-150"></div>
 
-            {/* 注目を集める要素 */}
-            <motion.div
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="absolute -top-2 -right-2 w-6 h-6 bg-[#e53935] rounded-full flex items-center justify-center z-10"
-            >
-              <Zap size={12} className="text-white" />
-            </motion.div>
-
             {/* メインボタン - スマホ最適化 */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
@@ -68,11 +59,6 @@ const FloatingCTA: React.FC = () => {
                   {/* ヘッダー */}
                   <div className="flex justify-between items-center mb-3">
                     <div className="flex items-center">
-                      <motion.div
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                        className="w-3 h-3 bg-[#e53935] rounded-full mr-2"
-                      />
                       <h3 className="text-[#d4af37] font-bold text-base sm:text-lg">
                         無料相談受付中
                       </h3>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +17,7 @@
   }
 
   body {
-    font-family: 'Noto Sans JP', system-ui, sans-serif;
+    font-family: "Noto Sans JP", system-ui, sans-serif;
     background-color: #0a0a0a;
     color: white;
     overflow-x: hidden;
@@ -146,23 +146,34 @@
     line-height: 1.6;
   }
 
+  /* スマホ専用改行 */
+  .mobile-only-br {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    .mobile-only-br {
+      display: block;
+    }
+  }
+
   /* アニメーション遅延 */
   .animation-delay-75 {
     animation-delay: 75ms;
   }
-  
+
   .animation-delay-150 {
     animation-delay: 150ms;
   }
-  
+
   .animation-delay-300 {
     animation-delay: 300ms;
   }
-  
+
   .animation-delay-500 {
     animation-delay: 500ms;
   }
-  
+
   .animation-delay-1000 {
     animation-delay: 1000ms;
   }
@@ -199,7 +210,7 @@
     0% {
       opacity: 0;
       transform: translateY(100px) scale(0.9);
-      filter: blur(10px);
+      filter: blur(8px);
     }
     100% {
       opacity: 1;
@@ -214,7 +225,8 @@
   }
 
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -232,7 +244,8 @@
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
     }
     100% {
-      box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), 0 0 80px rgba(212, 175, 55, 0.2);
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.6),
+        0 0 80px rgba(212, 175, 55, 0.2);
     }
   }
 
@@ -243,7 +256,7 @@
   }
 
   .shimmer::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
@@ -272,7 +285,7 @@
   0% {
     opacity: 0;
     transform: translateY(50px) rotateX(-90deg);
-    filter: blur(10px);
+    filter: blur(8px);
   }
   100% {
     opacity: 1;
@@ -283,7 +296,8 @@
 
 /* パーティクルアニメーション */
 @keyframes particleFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) translateX(0px) scale(1);
     opacity: 0.4;
   }
@@ -308,7 +322,7 @@
 }
 
 .btn-ripple::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -328,7 +342,9 @@
 /* スマホ専用の最適化 */
 @media (max-width: 767px) {
   /* スマホでのタッチ操作最適化 */
-  button, a, [role="button"] {
+  button,
+  a,
+  [role="button"] {
     min-height: 44px;
     min-width: 44px;
   }

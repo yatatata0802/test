@@ -16,7 +16,9 @@ import {
   ArrowUp,
   ExternalLink,
   Zap,
+  ArrowRight,
 } from "lucide-react";
+import SEO from "../components/SEO";
 
 const SNSPage: React.FC = () => {
   const navigate = useNavigate();
@@ -152,6 +154,11 @@ const SNSPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white header-safe-padding pb-12 sm:pb-16">
+      <SEO
+        title="SNS | 矢田谷充則のソーシャルメディア"
+        description="矢田谷充則が発信するYouTube、Instagram、Twitter、LINEの公式アカウントをご紹介。コーチングのヒント、ライフスタイル、日常の気づきを各プラットフォームで発信中。"
+        keywords="SNS, ソーシャルメディア, 矢田谷充則, YouTube, Instagram, Twitter, LINE, コーチング, ライフスタイル"
+      />
       {/* 背景効果 */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-[#d4af37]/5 rounded-full blur-3xl animate-pulse" />

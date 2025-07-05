@@ -1,28 +1,38 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowDown, ArrowRight, Eye, Target } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowDown, ArrowRight, Eye, Target } from "lucide-react";
 
 interface VisualGuideProps {
-  type: 'arrow-down' | 'arrow-right' | 'pulse-dot' | 'glow-border' | 'attention-grabber';
+  type:
+    | "arrow-down"
+    | "arrow-right"
+    | "pulse-dot"
+    | "glow-border"
+    | "attention-grabber";
   className?: string;
   delay?: number;
   children?: React.ReactNode;
 }
 
-const VisualGuide: React.FC<VisualGuideProps> = ({ 
-  type, 
-  className = '', 
+const VisualGuide: React.FC<VisualGuideProps> = ({
+  type,
+  className = "",
   delay = 0,
-  children 
+  children,
 }) => {
   const renderGuide = () => {
     switch (type) {
-      case 'arrow-down':
+      case "arrow-down":
         return (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
+            transition={{
+              delay,
+              duration: 0.8,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
             className={`flex flex-col items-center text-[#d4af37] ${className}`}
           >
             <ArrowDown size={24} className="animate-bounce" />
@@ -30,12 +40,17 @@ const VisualGuide: React.FC<VisualGuideProps> = ({
           </motion.div>
         );
 
-      case 'arrow-right':
+      case "arrow-right":
         return (
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
+            transition={{
+              delay,
+              duration: 0.8,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
             className={`flex items-center text-[#d4af37] ${className}`}
           >
             <ArrowRight size={20} className="animate-pulse mr-2" />
@@ -43,7 +58,7 @@ const VisualGuide: React.FC<VisualGuideProps> = ({
           </motion.div>
         );
 
-      case 'pulse-dot':
+      case "pulse-dot":
         return (
           <motion.div
             initial={{ scale: 0 }}
@@ -56,7 +71,7 @@ const VisualGuide: React.FC<VisualGuideProps> = ({
           </motion.div>
         );
 
-      case 'glow-border':
+      case "glow-border":
         return (
           <motion.div
             initial={{ opacity: 0 }}
@@ -69,7 +84,7 @@ const VisualGuide: React.FC<VisualGuideProps> = ({
           </motion.div>
         );
 
-      case 'attention-grabber':
+      case "attention-grabber":
         return (
           <motion.div
             initial={{ scale: 1 }}
@@ -77,13 +92,6 @@ const VisualGuide: React.FC<VisualGuideProps> = ({
             transition={{ delay, duration: 2, repeat: Infinity }}
             className={`relative ${className}`}
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              className="absolute -top-2 -right-2 w-6 h-6 bg-[#e53935] rounded-full flex items-center justify-center"
-            >
-              <Eye size={12} className="text-white" />
-            </motion.div>
             {children}
           </motion.div>
         );

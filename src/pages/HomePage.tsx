@@ -146,7 +146,11 @@ const HomePage: React.FC = () => {
                 </p>
               </VisualGuide>
               <p>今の自分にモヤモヤしてるなら──</p>
-              <p>心と身体の両面から、"なりたい自分"に火をつける。</p>
+              <p>
+                心と身体の両面から、
+                <br className="mobile-only-br" />
+                "なりたい自分"に火をつける。
+              </p>
             </motion.div>
           </motion.div>
         </section>
@@ -179,16 +183,58 @@ const HomePage: React.FC = () => {
                 <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                   <div className="mt-8 space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                     <p>
-                      20年間、公安警察として"仮面の人生"を生きてきました。
-                      自分を押し殺し、「安定」と「期待」に応え続ける日々。でも心の奥ではずっと、「このままでいいのか？」という声が消えませんでした。
+                      20年間、公安警察として
+                      <br className="mobile-only-br" />
+                      "仮面の人生"を生きてきました。
+                      <br className="mobile-only-br" />
+                      自分を押し殺し、
+                      <br className="mobile-only-br" />
+                      「安定」と「期待」に応え続ける日々。
+                      <br className="mobile-only-br" />
+                      でも心の奥ではずっと、
+                      <br className="mobile-only-br" />
+                      「このままでいいのか？」という声が
+                      <br className="mobile-only-br" />
+                      消えませんでした。
                     </p>
                     <p>
-                      やがて、コーチングとの出会いがその仮面を剥がしました。
-                      「本当は、もっと自由に、自分らしく生きたい」──気づいたときには鬱状態。でもそれは、人生を取り戻すための"脱皮"でした。
+                      本当は、もっと自由に、
+                      <br className="mobile-only-br" />
+                      自分らしく生きたい──。
+                      <br className="mobile-only-br" />
+                      そんな想いに気づいたとき、
+                      <br className="mobile-only-br" />
+                      心と身体は限界を超えていた。
+                      <br className="mobile-only-br" />
+                      でも今振り返れば、
+                      <br className="mobile-only-br" />
+                      それは「壊れた」のではなく、
+                      <br className="mobile-only-br" />
+                      「脱皮」だった。
+                      <br className="mobile-only-br" />
+                      あのどん底を越えたからこそ、
+                      <br className="mobile-only-br" />
+                      今の"ブランディング思考"を
+                      <br className="mobile-only-br" />
+                      手に入れたんです。
                     </p>
                     <p>
-                      今は、筋トレや格闘技を通じて理想の自分を体現しながら、「人生を作品として生きる」人を増やす活動をしています。
-                      あなたの"本当の物語"を、一緒にデザインしませんか？
+                      今は、筋トレや格闘技を通じて
+                      <br className="mobile-only-br" />
+                      理想の自分を体現しながら、
+                      <br className="mobile-only-br" />
+                      「人生を作品として生きる」人を
+                      <br className="mobile-only-br" />
+                      増やす活動をしています。
+                    </p>
+                    <p>
+                      あなたの"本当の物語"を、
+                      <br className="mobile-only-br" />
+                      一緒にデザインしませんか？
+                      <br className="mobile-only-br" />
+                      ──これは、あなただけの人生を取り戻す
+                      <br className="mobile-only-br" />
+                      「最初のページ」です。
                     </p>
                   </div>
                 </div>
@@ -398,7 +444,7 @@ const HomePage: React.FC = () => {
                   <div className="bg-black/30 p-6 sm:p-8 rounded-lg mb-8 sm:mb-10">
                     <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                       筋トレや運動を通じて得た継続のコツと
-                      <br />
+                      <br className="mobile-only-br" />
                       コーチング技術を組み合わせた独自のアプローチでサポートします。
                     </p>
                   </div>

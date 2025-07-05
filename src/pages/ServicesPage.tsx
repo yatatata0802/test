@@ -18,6 +18,7 @@ import {
   Home,
   ArrowUp,
 } from "lucide-react";
+import SEO from "../components/SEO";
 
 const ServicesPage: React.FC = () => {
   const navigate = useNavigate();
@@ -27,8 +28,7 @@ const ServicesPage: React.FC = () => {
     {
       title: "行動変容支援",
       subtitle: "「変わりたい」を「変われる」に",
-      description:
-        "頭では分かってるのに行動できない。そんなあなたの心の壁を取り除き、確実に一歩を踏み出せるようサポートします。",
+      description: `頭では分かってるのに行動できない。<br className="mobile-only-br"/>そんなあなたの心の壁を取り除き、<br className="mobile-only-br"/>確実に一歩を踏み出せるようサポートします。`,
       icon: Target,
       color: "#e53935",
       features: [
@@ -50,8 +50,7 @@ const ServicesPage: React.FC = () => {
     {
       title: "自己管理強化",
       subtitle: "継続する力を身につける",
-      description:
-        "三日坊主から卒業し、目標達成に不可欠な「継続する力」を科学的アプローチで育てます。",
+      description: `三日坊主から卒業し、<br className="mobile-only-br"/>目標達成に不可欠な「継続する力」を<br className="mobile-only-br"/>科学的アプローチで育てます。`,
       icon: TrendingUp,
       color: "#d4af37",
       features: [
@@ -73,8 +72,7 @@ const ServicesPage: React.FC = () => {
     {
       title: "心と身体のサポート",
       subtitle: "内面と外見の両方から変革",
-      description:
-        "筋トレや運動を通じて得た継続のコツを活かし、メンタルとフィジカルの両面からバランスの取れたサポートを提供します。",
+      description: `筋トレや運動を通じて得た継続のコツを活かし、<br className="mobile-only-br"/>メンタルとフィジカルの両面から<br className="mobile-only-br"/>バランスの取れたサポートを提供します。`,
       icon: Heart,
       color: "#4caf50",
       features: [
@@ -163,6 +161,11 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 mobile-safe-area">
+      <SEO
+        title="コーチングサービス | 矢田谷充則の提供サービスと料金"
+        description="矢田谷充則が提供する行動変容支援、自己管理強化、心と身体のサポートといったコーチングサービスの詳細と料金プランをご紹介します。あなたの「変わりたい」を現実にする最適なプランを見つけてください。"
+        keywords="コーチングサービス, 料金プラン, 行動変容支援, 自己管理強化, 心と身体のサポート, 矢田谷充則, パーソナルコーチング, 目標達成, 習慣化, 筋トレ"
+      />
       {/* ヒーローセクション - 心理的訴求強化 */}
       <section className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
         {/* 背景効果 */}
@@ -188,10 +191,12 @@ const ServicesPage: React.FC = () => {
             <p className="text-xl sm:text-2xl text-[#d4af37] font-semibold mb-4">
               あなたの"変わりたい"を現実にする
             </p>
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed">
-              あなたの目標とライフスタイルに合わせて、最適なプランをお選びいただけます。
-              継続的なサポートで、確実な変化を実現します。
-            </p>
+            <p
+              className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: `あなたの目標とライフスタイルに合わせて、<br className="mobile-only-br"/>最適なプランをお選びいただけます。<br className="mobile-only-br"/>継続的なサポートで、確実な変化を実現します。`,
+              }}
+            />
           </motion.div>
 
           {/* 社会的証明 */}
@@ -227,9 +232,12 @@ const ServicesPage: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4">
               料金プラン
             </h2>
-            <p className="text-lg text-gray-300">
-              あなたの目標と予算に合わせてお選びください
-            </p>
+            <p
+              className="text-lg text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: `あなたの目標と予算に合わせて<br className="mobile-only-br"/>お選びください`,
+              }}
+            />
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
@@ -270,9 +278,12 @@ const ServicesPage: React.FC = () => {
                         ✓
                       </span>
                     </div>
-                    <p className="text-gray-300 text-sm sm:text-base">
-                      継続的な習慣化とモチベーション維持のサポート
-                    </p>
+                    <p
+                      className="text-gray-300 text-sm sm:text-base"
+                      dangerouslySetInnerHTML={{
+                        __html: `継続的な習慣化と<br className="mobile-only-br"/>モチベーション維持のサポート`,
+                      }}
+                    />
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-[#d4af37] flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -280,9 +291,12 @@ const ServicesPage: React.FC = () => {
                         ✓
                       </span>
                     </div>
-                    <p className="text-gray-300 text-sm sm:text-base">
-                      実践的なセルフマネジメント手法の指導
-                    </p>
+                    <p
+                      className="text-gray-300 text-sm sm:text-base"
+                      dangerouslySetInnerHTML={{
+                        __html: `実践的なセルフマネジメント<br className="mobile-only-br"/>手法の指導`,
+                      }}
+                    />
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-[#d4af37] flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -290,9 +304,12 @@ const ServicesPage: React.FC = () => {
                         ✓
                       </span>
                     </div>
-                    <p className="text-gray-300 text-sm sm:text-base">
-                      個人の成長目標に合わせたカスタマイズ
-                    </p>
+                    <p
+                      className="text-gray-300 text-sm sm:text-base"
+                      dangerouslySetInnerHTML={{
+                        __html: `個人の成長目標に合わせた<br className="mobile-only-br"/>カスタマイズ`,
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -319,9 +336,12 @@ const ServicesPage: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4">
               オプションサービス
             </h2>
-            <p className="text-lg text-gray-300">
-              より深いサポートをご希望の方へ
-            </p>
+            <p
+              className="text-lg text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: `より深いサポートを<br className="mobile-only-br"/>ご希望の方へ`,
+              }}
+            />
           </div>
 
           <motion.div
@@ -338,9 +358,12 @@ const ServicesPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">
                   ボディメイク指導
                 </h3>
-                <p className="text-[#d4af37] font-medium">
-                  趣味で続けている筋トレの経験を活かした実践的なアドバイス
-                </p>
+                <p
+                  className="text-[#d4af37] font-medium"
+                  dangerouslySetInnerHTML={{
+                    __html: `趣味で続けている筋トレの経験を活かした<br className="mobile-only-br"/>実践的なアドバイス`,
+                  }}
+                />
               </div>
             </div>
 
@@ -390,9 +413,12 @@ const ServicesPage: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4">
               お客様の声・ビフォーアフター事例
             </h2>
-            <p className="text-lg text-gray-300">
-              実際にコーチングを受けた方々の変化をご紹介
-            </p>
+            <p
+              className="text-lg text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: `実際にコーチングを受けた方々の<br className="mobile-only-br"/>変化をご紹介`,
+              }}
+            />
           </div>
 
           <div className="space-y-12">
@@ -415,22 +441,26 @@ const ServicesPage: React.FC = () => {
                     Before（セッション前）
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>
-                      •
-                      「自分のことがわかってない」「長所が見えない」という自己理解の不足。
-                    </li>
-                    <li>
-                      •
-                      真面目で責任感が強い一方で、コミュニケーションに苦手意識があり、言葉に詰まることもしばしば。
-                    </li>
-                    <li>
-                      •
-                      面接などでは「体力」「継続力」といった無難な回答しかできず、「しっくりこない」と感じていた。
-                    </li>
-                    <li>
-                      •
-                      「自分にはユーモアがない」というリミッティングビリーフに縛られていた。
-                    </li>
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「自分のことがわかってない」<br className="mobile-only-br"/>「長所が見えない」という<br className="mobile-only-br"/>自己理解の不足。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>真面目で責任感が強い一方で、<br className="mobile-only-br"/>コミュニケーションに苦手意識があり、<br className="mobile-only-br"/>言葉に詰まることもしばしば。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>面接などでは「体力」「継続力」といった<br className="mobile-only-br"/>無難な回答しかできず、<br className="mobile-only-br"/>「しっくりこない」と感じていた。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「自分にはユーモアがない」という<br className="mobile-only-br"/>リミッティングビリーフに縛られていた。`,
+                      }}
+                    />
                   </ul>
                 </div>
 
@@ -456,25 +486,31 @@ const ServicesPage: React.FC = () => {
                     After（セッション後）
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>
-                      •
-                      野球経験から「仲間を助けたい」という他者貢献の本質に気づき、自分の強みを再発見。
-                    </li>
-                    <li>
-                      •
-                      心配性＝準備力、慎重さ＝冷静な判断力として"短所を長所に再定義"。
-                    </li>
-                    <li>
-                      •
-                      「人前で話す」ではなく「1対1で堂々と話せるようになりたい」という現実的な目標へ軸が変化。
-                    </li>
-                    <li>
-                      •
-                      「質問力を鍛える」ことの意味に気づき、コミュニケーションへの向き合い方が変化。
-                    </li>
-                    <li>
-                      • 「頼られる存在になりたい」と自信を持って語れるように。
-                    </li>
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>野球経験から「仲間を助けたい」という<br className="mobile-only-br"/>他者貢献の本質に気づき、<br className="mobile-only-br"/>自分の強みを再発見。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>心配性＝準備力、慎重さ＝冷静な判断力として<br className="mobile-only-br"/>"短所を長所に再定義"。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「人前で話す」ではなく<br className="mobile-only-br"/>「1対1で堂々と話せるようになりたい」という<br className="mobile-only-br"/>現実的な目標へ軸が変化。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「質問力を鍛える」ことの意味に気づき、<br className="mobile-only-br"/>コミュニケーションへの向き合い方が変化。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「頼られる存在になりたい」と<br className="mobile-only-br"/>自信を持って語れるように。`,
+                      }}
+                    />
                   </ul>
                 </div>
               </div>
@@ -526,14 +562,16 @@ const ServicesPage: React.FC = () => {
                     Before（セッション前）
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>
-                      •
-                      「何となく分かってるつもり」だった思考が、実は整理されていなかった。
-                    </li>
-                    <li>
-                      •
-                      家庭・仕事・自分の今後に対するモヤモヤが重なり、優先順位や判断軸が不明確な状態。
-                    </li>
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「何となく分かってるつもり」だった思考が、<br className="mobile-only-br"/>実は整理されていなかった。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>家庭・仕事・自分の今後に対するモヤモヤが重なり、<br className="mobile-only-br"/>優先順位や判断軸が不明確な状態。`,
+                      }}
+                    />
                   </ul>
                 </div>
 
@@ -559,14 +597,21 @@ const ServicesPage: React.FC = () => {
                     After（セッション後）
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>• 「自分を見つめ直す時間は本当に大切だ」と痛感。</li>
-                    <li>
-                      •
-                      長年曖昧だった価値観や方向性が言語化され、思考がスッキリ。
-                    </li>
-                    <li>
-                      • コーチング後、「その日から即実践」と行動変容が見られた。
-                    </li>
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「自分を見つめ直す時間は本当に大切だ」と痛感。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>長年曖昧だった価値観や方向性が言語化され、<br className="mobile-only-br"/>思考がスッキリ。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>コーチング後、「その日から即実践」と<br className="mobile-only-br"/>行動変容が見られた。`,
+                      }}
+                    />
                   </ul>
                 </div>
               </div>
@@ -618,14 +663,16 @@ const ServicesPage: React.FC = () => {
                     Before（セッション前）
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>
-                      •
-                      転職を目指すも不採用。「年齢的にもう無理かも」という諦めが先行。
-                    </li>
-                    <li>
-                      •
-                      住宅ローン、発達障害のある娘の育児、人間関係と課題が山積みで、どこから動いていいか分からない状態。
-                    </li>
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>転職を目指すも不採用。<br className="mobile-only-br"/>「年齢的にもう無理かも」という諦めが先行。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>住宅ローン、発達障害のある娘の育児、<br className="mobile-only-br"/>人間関係と課題が山積みで、<br className="mobile-only-br"/>どこから動いていいか分からない状態。`,
+                      }}
+                    />
                   </ul>
                 </div>
 
@@ -651,21 +698,26 @@ const ServicesPage: React.FC = () => {
                     After（セッション後）
                   </h4>
                   <ul className="space-y-2 text-gray-300 text-sm">
-                    <li>
-                      • 「強みを活かして人脈を広げる」という突破口を発見。
-                    </li>
-                    <li>
-                      •
-                      セッション当日に迷っていた採用担当者へ連絡→即行動に移し、日程調整まで完了。
-                    </li>
-                    <li>
-                      •
-                      「目標を高く設定するだけで、考え方も行動もガラッと変わる」と自覚。
-                    </li>
-                    <li>
-                      •
-                      家族にもセッション内容を共有し、妻からも「ちゃんと考えてるやん」と前向きな反応が得られた。
-                    </li>
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「強みを活かして人脈を広げる」という<br className="mobile-only-br"/>突破口を発見。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>セッション当日に迷っていた採用担当者へ連絡→<br className="mobile-only-br"/>即行動に移し、日程調整まで完了。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>「目標を高く設定するだけで、<br className="mobile-only-br"/>考え方も行動もガラッと変わる」と自覚。`,
+                      }}
+                    />
+                    <li
+                      dangerouslySetInnerHTML={{
+                        __html: `•<br className="mobile-only-br"/>家族にもセッション内容を共有し、<br className="mobile-only-br"/>妻からも「ちゃんと考えてるやん」と<br className="mobile-only-br"/>前向きな反応が得られた。`,
+                      }}
+                    />
                   </ul>
                 </div>
               </div>
@@ -730,7 +782,7 @@ const ServicesPage: React.FC = () => {
 
               <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
                 フィジーク経験とコーチング技術を組み合わせた
-                <br />
+                <br className="mobile-only-br" />
                 独自のアプローチでサポートします。
               </p>
 

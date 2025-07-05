@@ -97,7 +97,7 @@ const LandingPage: React.FC = () => {
                       opacity: 0,
                       scale: 0.3,
                       rotateX: -90,
-                      filter: "blur(10px)",
+                      filter: "blur(8px)",
                     }}
                     animate={{
                       opacity: 1,

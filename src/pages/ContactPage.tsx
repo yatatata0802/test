@@ -1,7 +1,17 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Send, Heart, Shield, Mail, MapPin, Clock, Home, ArrowUp } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import {
+  Send,
+  Heart,
+  Shield,
+  Mail,
+  MapPin,
+  Clock,
+  Home,
+  ArrowUp,
+} from "lucide-react";
+import SEO from "../components/SEO";
 
 interface FormData {
   name: string;
@@ -12,16 +22,18 @@ interface FormData {
 const ContactPage: React.FC = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -31,24 +43,29 @@ const ContactPage: React.FC = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, text: 'coaching@yatagai.com' },
-    { icon: MapPin, text: '大阪府大阪市（オンライン対応可）' },
-    { icon: Clock, text: '平日 9:00-21:00 / 土日 10:00-18:00' }
+    { icon: Mail, text: "coaching@yatagai.com" },
+    { icon: MapPin, text: "大阪府大阪市（オンライン対応可）" },
+    { icon: Clock, text: "平日 9:00-21:00 / 土日 10:00-18:00" },
   ];
 
   const assurances = [
-    '無理な勧誘は一切いたしません',
-    'ご相談内容・個人情報は秘密厳守',
-    '初回体験セッションは完全無料',
-    '24時間以内に必ずご返信'
+    "無理な勧誘は一切いたしません",
+    "ご相談内容・個人情報は秘密厳守",
+    "初回体験セッションは完全無料",
+    "24時間以内に必ずご返信",
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white header-safe-padding pb-12 sm:pb-16 px-4 sm:px-6">
+      <SEO
+        title="お問い合わせ | 矢田谷充則のコーチング相談"
+        description="矢田谷充則へのコーチングに関するお問い合わせはこちらから。無料相談の申し込み、サービス内容に関するご質問など、お気軽にご連絡ください。公安警察官経験を活かしたサポート。"
+        keywords="お問い合わせ, 無料相談, コーチング相談, 矢田谷充則, 連絡先, 質問, コーチング"
+      />
       <div className="max-w-6xl mx-auto">
         {/* ヒーローセクション - スマホ最適化 */}
         <div className="text-center mb-12 sm:mb-16 pt-8 sm:pt-12">
@@ -56,7 +73,9 @@ const ContactPage: React.FC = () => {
             CONTACT
           </h1>
           <div className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-2">
-            あなたの"変わりたい"を<br />ここから。
+            あなたの"変わりたい"を
+            <br />
+            ここから。
           </div>
         </div>
 
@@ -64,7 +83,7 @@ const ContactPage: React.FC = () => {
           {/* お問い合わせフォーム - スマホ最適化 */}
           <div className="p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-[#d4af37]/20 rounded-2xl hover:border-[#d4af37]/40">
             {isSubmitted ? (
-              <motion.div 
+              <motion.div
                 className="text-center py-8 sm:py-12"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -75,7 +94,8 @@ const ContactPage: React.FC = () => {
                   ありがとうございます！
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                  お問い合わせを受け付けました。<br />
+                  お問い合わせを受け付けました。
+                  <br />
                   24時間以内にご返信いたします。
                 </p>
               </motion.div>
@@ -85,9 +105,15 @@ const ContactPage: React.FC = () => {
                   <Send className="mr-3" size={20} />
                   お問い合わせフォーム
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-4 sm:space-y-6"
+                >
                   <div>
-                    <label htmlFor="name" className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base">
+                    <label
+                      htmlFor="name"
+                      className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base"
+                    >
                       お名前 *
                     </label>
                     <input
@@ -102,7 +128,10 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base">
+                    <label
+                      htmlFor="email"
+                      className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base"
+                    >
                       メールアドレス *
                     </label>
                     <input
@@ -117,7 +146,10 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base">
+                    <label
+                      htmlFor="message"
+                      className="block text-[#d4af37] font-semibold mb-2 text-sm sm:text-base"
+                    >
                       お問い合わせ内容 *
                     </label>
                     <textarea
@@ -131,7 +163,7 @@ const ContactPage: React.FC = () => {
                       placeholder="ご質問やご相談内容をお聞かせください..."
                     />
                   </div>
-                  <button 
+                  <button
                     type="submit"
                     className="w-full flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] border-none rounded-full cursor-pointer transition-all duration-300 hover:from-[#fffbe6] hover:to-[#ffd700] hover:text-[#d4af37] hover:transform hover:scale-[1.02] mobile-touch-target"
                   >
@@ -153,8 +185,14 @@ const ContactPage: React.FC = () => {
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
                   return (
-                    <div key={index} className="flex items-center text-gray-300 text-sm sm:text-base">
-                      <IconComponent className="text-[#d4af37] mr-3 sm:mr-4 flex-shrink-0" size={16} />
+                    <div
+                      key={index}
+                      className="flex items-center text-gray-300 text-sm sm:text-base"
+                    >
+                      <IconComponent
+                        className="text-[#d4af37] mr-3 sm:mr-4 flex-shrink-0"
+                        size={16}
+                      />
                       <span>{info.text}</span>
                     </div>
                   );
@@ -170,7 +208,10 @@ const ContactPage: React.FC = () => {
               <div className="space-y-3 sm:space-y-4 text-gray-300">
                 {assurances.map((assurance, index) => (
                   <div key={index} className="flex items-start">
-                    <Heart className="text-[#d4af37] mr-3 mt-1 flex-shrink-0" size={12} />
+                    <Heart
+                      className="text-[#d4af37] mr-3 mt-1 flex-shrink-0"
+                      size={12}
+                    />
                     <span className="text-sm sm:text-base">{assurance}</span>
                   </div>
                 ))}
@@ -182,7 +223,8 @@ const ContactPage: React.FC = () => {
                 今すぐ行動を起こしませんか？
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                人生を変える最初の一歩は、<br />
+                人生を変える最初の一歩は、
+                <br />
                 このフォームを送信することから始まります。
               </p>
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#d4af37]">
@@ -194,7 +236,8 @@ const ContactPage: React.FC = () => {
 
         <div className="p-6 sm:p-8 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-center mt-12 sm:mt-16">
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
-            一人で悩まず、まずは話してみませんか？<br />
+            一人で悩まず、まずは話してみませんか？
+            <br />
             あなたの"変わりたい"という気持ちを、全力でサポートします。
           </p>
         </div>
@@ -202,7 +245,7 @@ const ContactPage: React.FC = () => {
         {/* ナビゲーションボタン */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-8 sm:py-12">
           <motion.button
-            onClick={() => navigate('/main')}
+            onClick={() => navigate("/main")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] rounded-full transition-all duration-300 hover:shadow-[0_8px_32px_rgba(212,175,55,0.4)] mobile-touch-target"
@@ -210,7 +253,7 @@ const ContactPage: React.FC = () => {
             <Home size={20} />
             HOMEに戻る
           </motion.button>
-          
+
           <motion.button
             onClick={scrollToTop}
             whileHover={{ scale: 1.05 }}
