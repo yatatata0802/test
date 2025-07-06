@@ -16,9 +16,9 @@ import {
   ArrowUp,
   ExternalLink,
   Zap,
-  ArrowRight,
 } from "lucide-react";
 import SEO from "../components/SEO";
+import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const SNSPage: React.FC = () => {
   const navigate = useNavigate();
