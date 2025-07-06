@@ -400,3 +400,15 @@
     line-break: strict;
   }
 }
+
+@keyframes pulse-line {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 185, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 185, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 185, 0, 0);
+  }
+}

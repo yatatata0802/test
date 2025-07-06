@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { MessageCircle, X, Zap, Clock, Users } from "lucide-react";
+import { FileText, X, Zap, Clock, Users } from "lucide-react";
 import ThumbZone from "./ui/ThumbZone";
 
 const FloatingCTA: React.FC = () => {
@@ -33,14 +33,14 @@ const FloatingCTA: React.FC = () => {
               onClick={() => setIsExpanded(!isExpanded)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-r from-[#d4af37] via-[#ffd700] to-[#e53935] rounded-full shadow-2xl flex items-center justify-center text-[#181818] hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all duration-300 mobile-touch-target"
+              className="relative w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-r from-[#d4af37] via-[#ffd700] to-[#e53935] rounded-full shadow-2xl flex items-center justify-center text-[#181818] hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all duration-300 mobile-touch-target"
               aria-label="無料相談を申し込む"
               style={{
                 background: "linear-gradient(45deg, #d4af37, #ffd700, #e53935)",
                 animation: "pulse 2s infinite",
               }}
             >
-              <MessageCircle size={22} className="animate-bounce" />
+              <FileText size={22} className="animate-bounce" />
             </motion.button>
 
             {/* 展開メニュー - スマホ最適化 & 視線誘導 */}

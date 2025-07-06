@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Target,
   Eye,
+  MessageCircle,
 } from "lucide-react";
 import SectionDivider from "../components/SectionDivider";
 import VisualGuide from "../components/ui/VisualGuide";

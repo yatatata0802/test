@@ -10,6 +10,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingSocial from "./components/ui/FloatingSocial";
+import FloatingLineCTA from "./components/ui/FloatingLineCTA";
 
 function App() {
   return (
