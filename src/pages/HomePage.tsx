@@ -400,13 +400,18 @@ const HomePage: React.FC = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <OptimizedCTA
-                    onClick={() => navigate("/contact")}
+                    onClick={() =>
+                      window.open(
+                        "https://line.me/R/ti/p/@YOUR_LINE_ID",
+                        "_blank"
+                      )
+                    }
                     variant="urgent"
                     size="xl"
-                    urgency="⏰ 今月限定3名様"
+                    urgency="✨ LINE登録で限定特典GET！"
                     socialProof="初回セッション完全無料"
                   >
-                    無料で人生を覚醒させる第一歩を踏み出す
+                    LINEで人生を変える第一歩を踏み出す！
                   </OptimizedCTA>
                 </div>
 
