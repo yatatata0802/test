@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, LucideIcon } from 'lucide-react';
+import { ArrowRight, DivideIcon as LucideIcon } from 'lucide-react';
 
 interface MobileOptimizedButtonProps {
   children: React.ReactNode;
