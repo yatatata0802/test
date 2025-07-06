@@ -206,13 +206,9 @@ const ProfilePage: React.FC = () => {
           {/* プロフィール基本情報 - スマホ最適化 */}
           <div className="max-w-sm sm:max-w-md mx-auto mb-8 sm:mb-10 p-4 sm:p-6 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-left border-l-[5px] border-[#e53935] text-sm sm:text-base">
             {basicProfile.map((line, index) => (
-              <React.Fragment key={index}>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: smartBreakJapanese(line, 25),
-                  }}
-                />
-              </React.Fragment>
+              <div key={index} className="mb-1">
+                {line}
+              </div>
             ))}
           </div>
 
@@ -228,14 +224,7 @@ const ProfilePage: React.FC = () => {
                     GCS認定コーチ
                   </h2>
                   <p className="text-gray-300 text-sm">
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(
-                          "銀座コーチングスクール認定資格",
-                          25
-                        ),
-                      }}
-                    />
+                    銀座コーチングスクール認定資格
                   </p>
                 </div>
               </div>
@@ -245,24 +234,10 @@ const ProfilePage: React.FC = () => {
                   <strong className="text-[#d4af37]">
                     銀座コーチングスクール
                   </strong>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: smartBreakJapanese(
-                        "でコーチングの基礎から実践まで体系的に学び、認定コーチとしての資格を取得しました。",
-                        25
-                      ),
-                    }}
-                  />
+                  でコーチングの基礎から実践まで体系的に学び、認定コーチとしての資格を取得しました。
                 </p>
                 <p>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: smartBreakJapanese(
-                        "GCSは日本最大級のコーチングスクールとして知られ、厳格な認定基準をクリアしたコーチのみが認定コーチとして活動できます。",
-                        25
-                      ),
-                    }}
-                  />
+                  GCSは日本最大級のコーチングスクールとして知られ、厳格な認定基準をクリアしたコーチのみが認定コーチとして活動できます。
                 </p>
                 <div className="mt-4 p-3 bg-white/10 rounded-lg border-l-4 border-[#d4af37]">
                   <p className="text-[#d4af37] font-semibold text-sm mb-1">
@@ -270,44 +245,16 @@ const ProfilePage: React.FC = () => {
                   </p>
                   <ul className="text-gray-300 text-sm space-y-1 leading-normal">
                     <li>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: smartBreakJapanese(
-                            "• 体系的で実践的なコーチングスキル",
-                            25
-                          ),
-                        }}
-                      />
+                      • 体系的で実践的なコーチングスキル
                     </li>
                     <li>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: smartBreakJapanese(
-                            "• 継続的な学習とスキルアップ",
-                            25
-                          ),
-                        }}
-                      />
+                      • 継続的な学習とスキルアップ
                     </li>
                     <li>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: smartBreakJapanese(
-                            "• 厳格な認定基準をクリアした信頼性",
-                            25
-                          ),
-                        }}
-                      />
+                      • 厳格な認定基準をクリアした信頼性
                     </li>
                     <li>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: smartBreakJapanese(
-                            "• 日本最大級スクールのネットワーク",
-                            25
-                          ),
-                        }}
-                      />
+                      • 日本最大級スクールのネットワーク
                     </li>
                   </ul>
                 </div>
@@ -329,12 +276,13 @@ const ProfilePage: React.FC = () => {
           {/* My Story セクション */}
           <section className="max-w-4xl mx-auto px-4 sm:px-5 relative z-10 jp-text-optimal text-balance">
             {/* タイトルのみ大きく表示 */}
-            <p
-              className="text-center text-2xl sm:text-3xl font-bold text-[#d4af37] mb-10"
-              dangerouslySetInnerHTML={{
-                __html: smartBreakJapanese(profileStoryContent[0].content, 25),
-              }}
-            />
+            <div className="text-center text-2xl sm:text-3xl font-bold text-[#d4af37] mb-10">
+              {profileStoryContent[0].content.split('\n\n').map((line, index) => (
+                <p key={index} className={index === 0 ? "mb-4" : ""}>
+                  {line}
+                </p>
+              ))}
+            </div>
             {/* headingごとにグループ化して四角で囲む */}
             {(() => {
               const blocks = [];
@@ -371,7 +319,7 @@ const ProfilePage: React.FC = () => {
                             transition={{ duration: 0.7, delay: i * 0.05 }}
                             viewport={{ once: true }}
                           >
-                            {smartBreakJapanese(item.content, 25)}
+                            {item.content}
                           </motion.h3>
                         );
                       }
@@ -381,14 +329,18 @@ const ProfilePage: React.FC = () => {
                           className={`${
                             item.className ? item.className : ""
                           } text-sm leading-normal`}
-                          dangerouslySetInnerHTML={{
-                            __html: smartBreakJapanese(item.content, 25),
-                          }}
                           initial={{ opacity: 0, y: 30 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.7, delay: i * 0.05 }}
                           viewport={{ once: true }}
-                        />
+                        >
+                          {item.content.split('\n\n').map((paragraph, pIndex) => (
+                            <span key={pIndex}>
+                              {paragraph}
+                              {pIndex < item.content.split('\n\n').length - 1 && <><br/><br/></>}
+                            </span>
+                          ))}
+                        </motion.p>
                       );
                     })}
                   </motion.div>
