@@ -141,14 +141,14 @@ const HomePage: React.FC = () => {
               transition={{ delay: 1.5, duration: 1 }}
               className="text-base sm:text-lg md:text-xl leading-relaxed space-y-3 sm:space-y-4 px-2 mb-8"
             >
-              <p className="jp-text-optimal text-balance">{smartBreakJapanese(`"このまま"で、本当にいいのか？──と問い続けるあなたへ。`)}</p>
+              <p className="jp-text-optimal text-balance">"このまま"で、本当にいいのか？──と問い続けるあなたへ。</p>
               <VisualGuide type="glow-border" delay={2.5}>
                 <p className="text-xl sm:text-2xl font-bold text-[#d4af37]">
                   "なりたい自分"を夢で終わらせない。
                 </p>
               </VisualGuide>
               <p>今の自分にモヤモヤしてるなら──</p>
-              <p>{smartBreakJapanese(`心と身体の両面から、"なりたい自分"に火をつける。`)}</p>
+              <p>心と身体の両面から、"なりたい自分"に火をつける。</p>
             </motion.div>
           </motion.div>
         </section>
@@ -180,13 +180,13 @@ const HomePage: React.FC = () => {
 
                 <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
                   <div className="mt-8 space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed">
-                    <p>{smartBreakJapanese(`20年間、公安警察官として生きてきた私は、常に"仮面"を被り、自分を押し殺してきました。「安定」と「期待」に応え続ける日々の中で、心の奥底ではずっと、「このままで、本当にいいのか？」という問いが消えませんでした。`)}</p>
+                    <p>20年間、公安警察官として生きてきた私は、常に"仮面"を被り、自分を押し殺してきました。「安定」と「期待」に応え続ける日々の中で、心の奥底ではずっと、「このままで、本当にいいのか？」という問いが消えませんでした。</p>
                     <p></p>
-                    <p>{smartBreakJapanese(`もっと自由に、自分らしく生きたい──。その強い想いに気づいたとき、心身は限界を迎えました。しかし、それは「壊れた」のではなく、「脱皮」だったのです。あのどん底を乗り越えたからこそ、私は独自の"ブランディング思考"を手に入れました。`)}</p>
+                    <p>もっと自由に、自分らしく生きたい──。その強い想いに気づいたとき、心身は限界を迎えました。しかし、それは「壊れた」のではなく、「脱皮」だったのです。あのどん底を乗り越えたからこそ、私は独自の"ブランディング思考"を手に入れました。</p>
                     <p></p>
-                    <p>{smartBreakJapanese(`今、私は自身の「挑戦」の象徴として、筋トレや格闘技を通じて理想の自分を体現しています。そして、そこで培った「継続力」や「自己変革」の経験を活かし、「人生を作品として生きる」人を増やす活動に情熱を注いでいます。`)}</p>
+                    <p>今、私は自身の「挑戦」の象徴として、筋トレや格闘技を通じて理想の自分を体現しています。そして、そこで培った「継続力」や「自己変革」の経験を活かし、「人生を作品として生きる」人を増やす活動に情熱を注いでいます。</p>
                     <p></p>
-                    <p>{smartBreakJapanese(`さあ、あなたの"本当の物語"を、私と一緒にデザインしませんか？──これは、あなただけの人生を取り戻す、記念すべき「最初のページ」です。`)}</p>
+                    <p>さあ、あなたの"本当の物語"を、私と一緒にデザインしませんか？──これは、あなただけの人生を取り戻す、記念すべき「最初のページ」です。</p>
                   </div>
                 </div>
 
@@ -241,7 +241,7 @@ const HomePage: React.FC = () => {
                         <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
                           {target.text}
                         </h3>
-                        <p className="text-sm sm:text-base text-gray-400 jp-text-optimal leading-relaxed">
+                        <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                           {target.description}
                         </p>
                       </div>
@@ -286,7 +286,7 @@ const HomePage: React.FC = () => {
               </div>
 
               <VisualGuide type="glow-border" delay={0.5}>
-                <div className="text-[#d4af37] font-semibold mb-4 sm:mb-6 text-lg sm:text-xl bg-[#d4af37]/10 p-4 rounded-lg text-center jp-text-optimal text-balance">
+                <div className="text-[#d4af37] font-semibold mb-4 sm:mb-6 text-lg sm:text-xl bg-[#d4af37]/10 p-4 rounded-lg text-center">
                   あなたの「変わりたい」を、具体的な「行動」へ。
                 </div>
               </VisualGuide>
@@ -296,18 +296,18 @@ const HomePage: React.FC = () => {
                   {
                     title: "行動変容支援：",
                     description:
-                      smartBreakJapanese("「変わりたい」という漠然とした想いを、具体的な行動へと繋げ、着実に未来を切り拓く勇気を引き出します。"),
+                      "「変わりたい」という漠然とした想いを、具体的な行動へと繋げ、着実に未来を切り拓く勇気を引き出します。",
                     color: "#e53935",
                   },
                   {
                     title: "自己管理強化：",
-                    description: smartBreakJapanese("目標達成に不可欠な「継続する力」を、あなたのライフスタイルに合わせて最適化。揺るぎない習慣を構築します。"),
+                    description: "目標達成に不可欠な「継続する力」を、あなたのライフスタイルに合わせて最適化。揺るぎない習慣を構築します。",
                     color: "#d4af37",
                   },
                   {
                     title: "心と身体のサポート：",
                     description:
-                      smartBreakJapanese("筋トレや格闘技で培った経験を活かし、心身のバランスを整え、内面から輝く「魅せる自分」を創造します。"),
+                      "筋トレや格闘技で培った経験を活かし、心身のバランスを整え、内面から輝く「魅せる自分」を創造します。",
                     color: "#ffd700",
                   },
                 ].map((item, index) => (
@@ -393,8 +393,8 @@ const HomePage: React.FC = () => {
 
                 <VisualGuide type="glow-border" delay={0.5}>
                   <div className="bg-black/30 p-6 sm:p-8 rounded-lg mb-8 sm:mb-10">
-                    <p className="text-lg sm:text-xl text-gray-300 leading-relaxed jp-text-optimal text-balance">
-                      {smartBreakJapanese(`公安警察官として培った「洞察力」と「問題解決能力」。そして、筋トレや格闘技で得た「継続力」と「自己変革」の経験。これらを融合した独自のアプローチで、あなたの人生を力強くサポートします。`)}
+                    <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                      公安警察官として培った「洞察力」と「問題解決能力」。そして、筋トレや格闘技で得た「継続力」と「自己変革」の経験。これらを融合した独自のアプローチで、あなたの人生を力強くサポートします。
                     </p>
                   </div>
                 </VisualGuide>
