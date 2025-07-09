@@ -19,7 +19,6 @@ import {
   ArrowUp,
 } from "lucide-react";
 import SEO from "../components/SEO";
-import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const ServicesPage: React.FC = () => {
   const navigate = useNavigate();
@@ -29,66 +28,66 @@ const ServicesPage: React.FC = () => {
     {
       title: "行動変容支援",
       subtitle: "「変わりたい」を「変われる」に",
-      description: smartBreakJapanese(`頭では分かってるのに行動できない。そんなあなたの心の壁を取り除き、確実に一歩を踏み出せるようサポートします。`),
+      description: "頭では分かってるのに行動できない。そんなあなたの心の壁を取り除き、確実に一歩を踏み出せるようサポートします。",
       icon: Target,
       color: "#e53935",
       features: [
-        smartBreakJapanese("目標設定とアクションプランの作成"),
-        smartBreakJapanese("行動の障壁となる思考パターンの特定"),
-        smartBreakJapanese("小さな成功体験の積み重ね"),
-        smartBreakJapanese("継続的なモチベーション管理"),
+        "目標設定とアクションプランの作成",
+        "行動の障壁となる思考パターンの特定",
+        "小さな成功体験の積み重ね",
+        "継続的なモチベーション管理",
       ],
       benefits: [
-        smartBreakJapanese("3ヶ月で行動力が劇的に向上"),
-        smartBreakJapanese("先延ばし癖が改善される"),
-        smartBreakJapanese("自信を持って挑戦できるようになる"),
+        "3ヶ月で行動力が劇的に向上",
+        "先延ばし癖が改善される", 
+        "自信を持って挑戦できるようになる",
       ],
       testimonial: {
-        text: smartBreakJapanese("今まで何をやっても続かなかった私が、3ヶ月で人生が変わりました。"),
+        text: "今まで何をやっても続かなかった私が、3ヶ月で人生が変わりました。",
         author: "30代 会社員 T.Mさん",
       },
     },
     {
       title: "自己管理強化",
       subtitle: "継続する力を身につける",
-      description: smartBreakJapanese(`三日坊主から卒業し、目標達成に不可欠な「継続する力」を科学的アプローチで育てます。`),
+      description: "三日坊主から卒業し、目標達成に不可欠な「継続する力」を科学的アプローチで育てます。",
       icon: TrendingUp,
       color: "#d4af37",
       features: [
-        smartBreakJapanese("習慣化のメカニズム理解"),
-        smartBreakJapanese("時間管理とエネルギー管理"),
-        smartBreakJapanese("セルフモニタリング技術"),
-        smartBreakJapanese("挫折からの立ち直り方"),
+        "習慣化のメカニズム理解",
+        "時間管理とエネルギー管理",
+        "セルフモニタリング技術",
+        "挫折からの立ち直り方",
       ],
       benefits: [
-        smartBreakJapanese("習慣化成功率90%以上"),
-        smartBreakJapanese("時間の使い方が劇的に改善"),
-        smartBreakJapanese("ストレス耐性が向上"),
+        "習慣化成功率90%以上",
+        "時間の使い方が劇的に改善",
+        "ストレス耐性が向上",
       ],
       testimonial: {
-        text: smartBreakJapanese("毎日の習慣が身につき、仕事もプライベートも充実しています。"),
+        text: "毎日の習慣が身につき、仕事もプライベートも充実しています。",
         author: "40代 経営者 K.Sさん",
       },
     },
     {
       title: "心と身体のサポート",
       subtitle: "内面と外見の両方から変革",
-      description: smartBreakJapanese(`筋トレや運動を通じて得た継続のコツを活かし、メンタルとフィジカルの両面からバランスの取れたサポートを提供します。`),
+      description: "筋トレや運動を通じて得た継続のコツを活かし、メンタルとフィジカルの両面からバランスの取れたサポートを提供します。",
       icon: Heart,
       color: "#4caf50",
       features: [
-        smartBreakJapanese("メンタルとフィジカルの相互作用理解"),
-        smartBreakJapanese("ストレス管理とリカバリー"),
-        smartBreakJapanese("パフォーマンス向上のための生活習慣"),
-        smartBreakJapanese("自信構築のためのボディメイク"),
+        "メンタルとフィジカルの相互作用理解",
+        "ストレス管理とリカバリー",
+        "パフォーマンス向上のための生活習慣",
+        "自信構築のためのボディメイク",
       ],
       benefits: [
-        smartBreakJapanese("心身ともに健康的な変化"),
-        smartBreakJapanese("自信と魅力が大幅アップ"),
-        smartBreakJapanese("エネルギーレベルが向上"),
+        "心身ともに健康的な変化",
+        "自信と魅力が大幅アップ",
+        "エネルギーレベルが向上",
       ],
       testimonial: {
-        text: smartBreakJapanese("見た目も心も変わって、周りからの反応が全然違います。"),
+        text: "見た目も心も変わって、周りからの反応が全然違います。",
         author: "20代 フリーランス A.Hさん",
       },
     },
@@ -96,20 +95,20 @@ const ServicesPage: React.FC = () => {
 
   const successStories = [
     {
-      before: smartBreakJapanese("毎日同じことの繰り返しで、将来に不安を感じていた"),
-      after: smartBreakJapanese("新しい挑戦を続け、理想の自分に近づいている"),
+      before: "毎日同じことの繰り返しで、将来に不安を感じていた",
+      after: "新しい挑戦を続け、理想の自分に近づいている",
       period: "6ヶ月",
       age: "30代男性",
     },
     {
-      before: smartBreakJapanese("何をやっても続かず、自分に自信が持てなかった"),
-      after: smartBreakJapanese("習慣化に成功し、目標を次々と達成している"),
+      before: "何をやっても続かず、自分に自信が持てなかった",
+      after: "習慣化に成功し、目標を次々と達成している",
       period: "3ヶ月",
       age: "20代女性",
     },
     {
-      before: smartBreakJapanese("仕事のストレスで心身ともに疲弊していた"),
-      after: smartBreakJapanese("ストレス管理ができ、エネルギッシュに過ごしている"),
+      before: "仕事のストレスで心身ともに疲弊していた",
+      after: "ストレス管理ができ、エネルギッシュに過ごしている",
       period: "4ヶ月",
       age: "40代男性",
     },
@@ -121,10 +120,10 @@ const ServicesPage: React.FC = () => {
       price: "月額 15,000円",
       duration: "3ヶ月コース",
       features: [
-        smartBreakJapanese("月1回のセッション（60分）"),
-        smartBreakJapanese("チャットサポート"),
-        smartBreakJapanese("目標設定・進捗管理"),
-        smartBreakJapanese("基本的な習慣化サポート"),
+        "月1回のセッション（60分）",
+        "チャットサポート",
+        "目標設定・進捗管理",
+        "基本的な習慣化サポート",
       ],
       popular: false,
     },
@@ -133,11 +132,11 @@ const ServicesPage: React.FC = () => {
       price: "月額 25,000円",
       duration: "6ヶ月コース",
       features: [
-        smartBreakJapanese("月2回のセッション（60分）"),
-        smartBreakJapanese("24時間チャットサポート"),
-        smartBreakJapanese("目標設定・進捗管理"),
-        smartBreakJapanese("習慣化サポート"),
-        smartBreakJapanese("継続的なモチベーション管理"),
+        "月2回のセッション（60分）",
+        "24時間チャットサポート",
+        "目標設定・進捗管理",
+        "習慣化サポート",
+        "継続的なモチベーション管理",
       ],
       popular: true,
     },
@@ -146,11 +145,11 @@ const ServicesPage: React.FC = () => {
       price: "月額 40,000円",
       duration: "12ヶ月コース",
       features: [
-        smartBreakJapanese("月3回のセッション（90分）"),
-        smartBreakJapanese("24時間優先チャットサポート"),
-        smartBreakJapanese("完全オーダーメイドプログラム"),
-        smartBreakJapanese("継続的なモチベーション管理"),
-        smartBreakJapanese("成果保証制度"),
+        "月3回のセッション（90分）",
+        "24時間優先チャットサポート",
+        "完全オーダーメイドプログラム",
+        "継続的なモチベーション管理",
+        "成果保証制度",
       ],
       popular: false,
     },
@@ -194,10 +193,9 @@ const ServicesPage: React.FC = () => {
             </p>
             <p
               className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed jp-text-optimal text-balance"
-              dangerouslySetInnerHTML={{
-                __html: smartBreakJapanese(`あなたの目標とライフスタイルに合わせて、最適なプランをお選びいただけます。継続的なサポートで、確実な変化を実現します。`),
-              }}
-            />
+            >
+              あなたの目標とライフスタイルに合わせて、最適なプランをお選びいただけます。継続的なサポートで、確実な変化を実現します。
+            </p>
           </motion.div>
 
           {/* 社会的証明 */}

@@ -5,7 +5,6 @@ import { Home, ArrowUp, Target, Eye, Zap, Users } from "lucide-react";
 import VisualGuide from "../components/ui/VisualGuide";
 import ParticleBackground from "../components/ParticleBackground";
 import SEO from "../components/SEO";
-import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const WhatIsCoachingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -148,7 +147,7 @@ const WhatIsCoachingPage: React.FC = () => {
                       duration: 0.5,
                     }}
                     dangerouslySetInnerHTML={{
-                      __html: smartBreakJapanese(line, 25),
+                      __html: line.replace(/\n/g, '<br/>'),
                     }}
                   />
                 ))}

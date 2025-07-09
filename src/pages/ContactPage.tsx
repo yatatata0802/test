@@ -12,7 +12,6 @@ import {
   ArrowUp,
 } from "lucide-react";
 import SEO from "../components/SEO";
-import { smartBreakJapanese } from "../smartBreakJapanese";
 
 interface FormData {
   name: string;
@@ -44,16 +43,16 @@ const ContactPage: React.FC = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, text: smartBreakJapanese("coaching@yatagai.com") },
-    { icon: MapPin, text: smartBreakJapanese("大阪府大阪市（オンライン対応可）") },
-    { icon: Clock, text: smartBreakJapanese("平日 9:00-21:00 / 土日 10:00-18:00") },
+    { icon: Mail, text: "coaching@yatagai.com" },
+    { icon: MapPin, text: "大阪府大阪市（オンライン対応可）" },
+    { icon: Clock, text: "平日 9:00-21:00 / 土日 10:00-18:00" },
   ];
 
   const assurances = [
-    smartBreakJapanese("無理な勧誘は一切いたしません"),
-    smartBreakJapanese("ご相談内容・個人情報は秘密厳守"),
-    smartBreakJapanese("初回体験セッションは完全無料"),
-    smartBreakJapanese("24時間以内に必ずご返信"),
+    "無理な勧誘は一切いたしません",
+    "ご相談内容・個人情報は秘密厳守", 
+    "初回体験セッションは完全無料",
+    "24時間以内に必ずご返信",
   ];
 
   const scrollToTop = () => {
@@ -74,7 +73,7 @@ const ContactPage: React.FC = () => {
             CONTACT
           </h1>
           <div className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-2">
-            {smartBreakJapanese(`あなたの"変わりたい"をここから。`)}
+            あなたの"変わりたい"をここから。
           </div>
         </div>
 
@@ -220,7 +219,7 @@ const ContactPage: React.FC = () => {
                 今すぐ行動を起こしませんか？
               </h3>
               <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                {smartBreakJapanese(`人生を変える最初の一歩は、このフォームを送信することから始まります。`)}
+                人生を変える最初の一歩は、このフォームを送信することから始まります。
               </p>
               <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#d4af37]">
                 あなたの物語は、まだ途中だ。
@@ -231,7 +230,7 @@ const ContactPage: React.FC = () => {
 
         <div className="p-6 sm:p-8 bg-gradient-to-br from-[#d4af37]/20 to-[#ffd700]/20 border border-[#d4af37]/40 rounded-2xl text-center mt-12 sm:mt-16">
           <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed jp-text-optimal">
-            {smartBreakJapanese(`一人で悩まず、まずは話してみませんか？あなたの"変わりたい"という気持ちを、全力でサポートします。`)}
+            一人で悩まず、まずは話してみませんか？あなたの"変わりたい"という気持ちを、全力でサポートします。
           </p>
         </div>
 

@@ -18,7 +18,6 @@ import VisualGuide from "../components/ui/VisualGuide";
 import MobileOptimizedButton from "../components/ui/MobileOptimizedButton";
 import OptimizedCTA from "../components/ui/OptimizedCTA";
 import SEO from "../components/SEO";
-import { smartBreakJapanese } from "../smartBreakJapanese";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,19 +77,19 @@ const HomePage: React.FC = () => {
   const supportTargets = [
     {
       text: "「このままじゃダメだ」と悩み、動き出せない方",
-      description: smartBreakJapanese("頭では分かってるのに、なぜか行動できない状態から脱出"),
+      description: "頭では分かってるのに、なぜか行動できない状態から脱出",
     },
     {
       text: "「もっと強くなりたい」と、新しい挑戦をしたい方",
-      description: smartBreakJapanese("現状に満足せず、さらなる高みを目指したい向上心ある方"),
+      description: "現状に満足せず、さらなる高みを目指したい向上心ある方",
     },
     {
       text: "モチベーションが続かず、三日坊主で終わってしまう方",
-      description: smartBreakJapanese("やる気はあるのに継続できない悩みを根本から解決"),
+      description: "やる気はあるのに継続できない悩みを根本から解決",
     },
     {
       text: "目標達成のために自己管理能力を磨きたい方",
-      description: smartBreakJapanese("時間・感情・習慣を統合的に管理する力を身につける"),
+      description: "時間・感情・習慣を統合的に管理する力を身につける",
     },
   ];
 
