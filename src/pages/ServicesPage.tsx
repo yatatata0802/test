@@ -17,6 +17,7 @@ import {
   MessageCircle,
   Home,
   ArrowUp,
+  ExternalLink,
 } from "lucide-react";
 import SEO from "../components/SEO";
 
@@ -93,27 +94,6 @@ const ServicesPage: React.FC = () => {
     },
   ];
 
-  const successStories = [
-    {
-      before: "毎日同じことの繰り返しで、将来に不安を感じていた",
-      after: "新しい挑戦を続け、理想の自分に近づいている",
-      period: "6ヶ月",
-      age: "30代男性",
-    },
-    {
-      before: "何をやっても続かず、自分に自信が持てなかった",
-      after: "習慣化に成功し、目標を次々と達成している",
-      period: "3ヶ月",
-      age: "20代女性",
-    },
-    {
-      before: "仕事のストレスで心身ともに疲弊していた",
-      after: "ストレス管理ができ、エネルギッシュに過ごしている",
-      period: "4ヶ月",
-      age: "40代男性",
-    },
-  ];
-
   const pricingPlans = [
     {
       name: "ベーシック",
@@ -160,40 +140,41 @@ const ServicesPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 mobile-safe-area">
+    <div className="min-h-screen bg-[#0a0a0a] text-white header-safe-padding pb-12 sm:pb-16 mobile-safe-area">
       <SEO
         title="コーチングサービス | 矢田谷充則の提供サービスと料金"
         description="矢田谷充則が提供する行動変容支援、自己管理強化、心と身体のサポートといったコーチングサービスの詳細と料金プランをご紹介します。あなたの「変わりたい」を現実にする最適なプランを見つけてください。"
         keywords="コーチングサービス, 料金プラン, 行動変容支援, 自己管理強化, 心と身体のサポート, 矢田谷充則, パーソナルコーチング, 目標達成, 習慣化, 筋トレ"
       />
-      {/* ヒーローセクション - 心理的訴求強化 */}
-      <section className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
-        {/* 背景効果 */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-[#d4af37]/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-[#e53935]/10 rounded-full blur-3xl animate-pulse animation-delay-1000" />
-        </div>
+      
+      {/* 背景効果 */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-[#d4af37]/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-[#e53935]/5 rounded-full blur-3xl animate-pulse animation-delay-1000" />
+      </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* ヒーローセクション */}
+        <section className="text-center py-12 sm:py-16 lg:py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-6 sm:mb-8"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#e53935]/20 border border-[#e53935]/50 rounded-full text-[#e53935] text-sm font-bold mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#e53935]/20 border border-[#e53935]/50 rounded-full text-[#e53935] text-sm font-bold mb-6">
               <Zap size={16} className="animate-pulse" />
               今なら初回セッション無料
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[#d4af37] via-[#ffd700] to-[#d4af37] bg-clip-text text-transparent">
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-[#d4af37] via-[#ffd700] to-[#d4af37] bg-clip-text text-transparent">
               SERVICES
             </h1>
+            
             <p className="text-xl sm:text-2xl text-[#d4af37] font-semibold mb-4">
               あなたの"変わりたい"を現実にする
             </p>
-            <p
-              className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed jp-text-optimal text-balance"
-            >
+            
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed">
               あなたの目標とライフスタイルに合わせて、最適なプランをお選びいただけます。継続的なサポートで、確実な変化を実現します。
             </p>
           </motion.div>
@@ -221,22 +202,92 @@ const ServicesPage: React.FC = () => {
               <span className="text-gray-300">成長支援</span>
             </div>
           </motion.div>
-        </div>
-      </section>
+        </section>
 
-      {/* 料金プランセクション - 最初に表示 */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+        {/* サービス詳細セクション */}
+        <section className="py-12 sm:py-16 lg:py-20">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4">
+              提供サービス
+            </h2>
+            <p className="text-lg text-gray-300">
+              3つの柱で総合的にサポート
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.8 }}
+                  className="p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-[#d4af37]/40 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <div
+                      className="w-12 h-12 rounded-full flex items-center justify-center"
+                      style={{
+                        backgroundColor: `${service.color}20`,
+                        border: `2px solid ${service.color}`,
+                      }}
+                    >
+                      <IconComponent size={24} style={{ color: service.color }} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-[#d4af37]">
+                        {service.subtitle}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+
+                  <div className="space-y-3 mb-6">
+                    <h4 className="text-[#d4af37] font-semibold">主な内容</h4>
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-start gap-3">
+                        <CheckCircle size={16} className="text-[#d4af37] mt-1 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="bg-[#d4af37]/10 border border-[#d4af37]/30 rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Quote size={16} className="text-[#d4af37]" />
+                      <span className="text-[#d4af37] font-semibold text-sm">お客様の声</span>
+                    </div>
+                    <p className="text-gray-300 text-sm italic mb-2">
+                      "{service.testimonial.text}"
+                    </p>
+                    <p className="text-gray-400 text-xs">
+                      - {service.testimonial.author}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* 料金プランセクション */}
+        <section className="py-12 sm:py-16 lg:py-20">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4">
               料金プラン
             </h2>
-            <p
-              className="text-lg text-gray-300"
-              dangerouslySetInnerHTML={{
-                __html: smartBreakJapanese(`あなたの目標と予算に合わせてお選びください`),
-              }}
-            />
+            <p className="text-lg text-gray-300">
+              あなたの目標と予算に合わせてお選びください
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
@@ -270,46 +321,13 @@ const ServicesPage: React.FC = () => {
                   <p className="text-sm text-gray-400">{plan.duration}</p>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-[#d4af37] flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-[#181818] font-bold text-sm">
-                        ✓
-                      </span>
+                <div className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-start gap-3">
+                      <CheckCircle size={16} className="text-[#d4af37] mt-1 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
                     </div>
-                    <p
-                      className="text-gray-300 text-sm sm:text-base jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`継続的な習慣化とモチベーション維持のサポート`),
-                      }}
-                    />
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-[#d4af37] flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-[#181818] font-bold text-sm">
-                        ✓
-                      </span>
-                    </div>
-                    <p
-                      className="text-gray-300 text-sm sm:text-base jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`実践的なセルフマネジメント手法の指導`),
-                      }}
-                    />
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-[#d4af37] flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-[#181818] font-bold text-sm">
-                        ✓
-                      </span>
-                    </div>
-                    <p
-                      className="text-gray-300 text-sm sm:text-base jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`個人の成長目標に合わせたカスタマイズ`),
-                      }}
-                    />
-                  </div>
+                  ))}
                 </div>
 
                 <button
@@ -325,462 +343,10 @@ const ServicesPage: React.FC = () => {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* オプションサービスセクション */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#d4af37]/5 to-[#e53935]/5">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4">
-              オプションサービス
-            </h2>
-            <p
-              className="text-lg text-gray-300"
-              dangerouslySetInnerHTML={{
-                __html: smartBreakJapanese(`より深いサポートをご希望の方へ`),
-              }}
-            />
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-[#d4af37]/20 rounded-2xl"
-          >
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#d4af37]/20 border-2 border-[#d4af37] flex items-center justify-center mr-4">
-                <TrendingUp size={24} className="text-[#d4af37]" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  ボディメイク指導
-                </h3>
-                <p
-                  className="text-[#d4af37] font-medium jp-text-optimal leading-relaxed"
-                  dangerouslySetInnerHTML={{
-                    __html: smartBreakJapanese(`趣味で続けている筋トレの経験を活かした実践的なアドバイス`),
-                  }}
-                />
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <h4 className="text-[#d4af37] font-semibold mb-3">指導内容</h4>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  <li>• 個人に合わせたトレーニングプログラム作成</li>
-                  <li>• フォーム指導と怪我予防のアドバイス</li>
-                  <li>• 継続しやすい習慣化のコツ</li>
-                  <li>• モチベーション維持のサポート</li>
-                  <li>• 食事とトレーニングのバランス調整</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-[#d4af37] font-semibold mb-3">料金</h4>
-                <div className="text-2xl font-bold text-[#d4af37] mb-2">
-                  月額 +10,000円
-                </div>
-                <p className="text-gray-300 text-sm mb-4">
-                  どのプランにも追加可能です
-                </p>
-                <div className="bg-[#d4af37]/10 border border-[#d4af37]/30 rounded-lg p-3">
-                  <p className="text-[#d4af37] text-sm font-medium">
-                    💪 趣味で続けている筋トレの経験を活かした実践的なアドバイス
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <button
-                onClick={() => navigate("/contact")}
-                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] font-bold rounded-lg transition-all duration-300 hover:from-[#ffd700] hover:to-[#d4af37]"
-              >
-                オプション追加を相談する
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* お客様の声・ビフォーアフター事例セクション */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#d4af37]/5 to-[#e53935]/5">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#d4af37] mb-4">
-              お客様の声・ビフォーアフター事例
-            </h2>
-            <p
-              className="text-lg text-gray-300"
-              dangerouslySetInnerHTML={{
-                __html: smartBreakJapanese(`実際にコーチングを受けた方々の変化をご紹介`),
-              }}
-            />
-          </div>
-
-          <div className="space-y-12">
-            {/* Nさん */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
-            >
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-[#d4af37] mb-2">
-                  Nさん（30代・男性）｜自分を責めていた若手公務員
-                </h3>
-              </div>
-
-              <div className="space-y-6 mb-6">
-                <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-                  <h4 className="text-red-400 font-semibold mb-3 text-lg">
-                    Before（セッション前）
-                  </h4>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「自分のことがわかってない」「長所が見えない」という自己理解の不足。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•真面目で責任感が強い一方で、コミュニケーションに苦手意識があり、言葉に詰まることもしばしば。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•面接などでは「体力」「継続力」といった無難な回答しかできず、「しっくりこない」と感じていた。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「自分にはユーモアがない」というリミッティングビリーフに縛られていた。`),
-                      }}
-                    />
-                  </ul>
-                </div>
-
-                {/* 矢印セクション */}
-                <div className="flex justify-center items-center">
-                  <div className="flex flex-col items-center gap-2 px-4 py-2 bg-gradient-to-b from-red-500/20 to-green-500/20 border border-[#d4af37]/50 rounded-full">
-                    <ArrowRight
-                      className="text-[#d4af37] animate-pulse rotate-90"
-                      size={20}
-                    />
-                    <span className="text-[#d4af37] font-bold text-sm">
-                      コーチングによる変化
-                    </span>
-                    <ArrowRight
-                      className="text-[#d4af37] animate-pulse rotate-90"
-                      size={20}
-                    />
-                  </div>
-                </div>
-
-                <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
-                  <h4 className="text-green-400 font-semibold mb-3 text-lg">
-                    After（セッション後）
-                  </h4>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•野球経験から「仲間を助けたい」という他者貢献の本質に気づき、自分の強みを再発見。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•心配性＝準備力、慎重さ＝冷静な判断力として"短所を長所に再定義"。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「人前で話す」ではなく「1対1で堂々と話せるようになりたい」という現実的な目標へ軸が変化。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「質問力を鍛える」ことの意味に気づき、コミュニケーションへの向き合い方が変化。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「頼られる存在になりたい」と自信を持って語れるように。`),
-                      }}
-                    />
-                  </ul>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="p-4 bg-[#d4af37]/10 border border-[#d4af37]/30 rounded-lg">
-                  <h4 className="text-[#d4af37] font-semibold mb-2">
-                    印象的な台詞
-                  </h4>
-                  <blockquote className="text-gray-300 italic text-sm">
-                    「これって強みになるんですか…？ただの心配性やと思ってました」
-                  </blockquote>
-                </div>
-
-                <div className="p-4 bg-white/5 border border-white/20 rounded-lg">
-                  <h4 className="text-white font-semibold mb-2">現在の様子</h4>
-                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
-                    職場で後輩から相談される場面が増え、自己肯定感が上がっている。自分の"取扱説明書"が分かったことで、人との関係性にも余裕が出てきた。
-                  </p>
-                </div>
-
-                <div className="p-4 bg-[#e53935]/10 border border-[#e53935]/30 rounded-lg">
-                  <h4 className="text-[#e53935] font-semibold mb-2">
-                    コーチの関わりについて
-                  </h4>
-                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
-                    「話を聴くだけじゃなく、思考の奥にある価値観まで一緒に掘ってくれる。あのセッションは宝物です」
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Iさん */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
-            >
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-[#d4af37] mb-2">
-                  Iさん（40代・男性）｜家庭と仕事の間で悩む中間管理職
-                </h3>
-              </div>
-
-              <div className="space-y-6 mb-6">
-                <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-                  <h4 className="text-red-400 font-semibold mb-3 text-lg">
-                    Before（セッション前）
-                  </h4>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「何となく分かってるつもり」だった思考が、実は整理されていなかった。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•家庭・仕事・自分の今後に対するモヤモヤが重なり、優先順位や判断軸が不明確な状態。`),
-                      }}
-                    />
-                  </ul>
-                </div>
-
-                {/* 矢印セクション */}
-                <div className="flex justify-center items-center">
-                  <div className="flex flex-col items-center gap-2 px-4 py-2 bg-gradient-to-b from-red-500/20 to-green-500/20 border border-[#d4af37]/50 rounded-full">
-                    <ArrowRight
-                      className="text-[#d4af37] animate-pulse rotate-90"
-                      size={20}
-                    />
-                    <span className="text-[#d4af37] font-bold text-sm">
-                      コーチングによる変化
-                    </span>
-                    <ArrowRight
-                      className="text-[#d4af37] animate-pulse rotate-90"
-                      size={20}
-                    />
-                  </div>
-                </div>
-
-                <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
-                  <h4 className="text-green-400 font-semibold mb-3 text-lg">
-                    After（セッション後）
-                  </h4>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「自分を見つめ直す時間は本当に大切だ」と痛感。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•長年曖昧だった価値観や方向性が言語化され、思考がスッキリ。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•コーチング後、「その日から即実践」と行動変容が見られた。`),
-                      }}
-                    />
-                  </ul>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="p-4 bg-[#d4af37]/10 border border-[#d4af37]/30 rounded-lg">
-                  <h4 className="text-[#d4af37] font-semibold mb-2">
-                    印象的な台詞
-                  </h4>
-                  <blockquote className="text-gray-300 italic text-sm">
-                    「やたさんの変わりようにも驚いた。昔のギラギラがなくなってて、これがコーチングの力なんやなって思った」
-                  </blockquote>
-                </div>
-
-                <div className="p-4 bg-white/5 border border-white/20 rounded-lg">
-                  <h4 className="text-white font-semibold mb-2">現在の様子</h4>
-                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
-                    キャリアアップを目指し、試験勉強と行動計画を立てて実践中。変化に驚いた妻からも「本気なんやな」と応援の声。
-                  </p>
-                </div>
-
-                <div className="p-4 bg-[#e53935]/10 border border-[#e53935]/30 rounded-lg">
-                  <h4 className="text-[#e53935] font-semibold mb-2">
-                    コーチの関わりについて
-                  </h4>
-                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
-                    「対話を通じて丁寧に話を深掘ってくれるから、頭が整理されて迷いが消えていく。感覚じゃなく"納得"できたのが良かった」
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Mさん */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl"
-            >
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-[#d4af37] mb-2">
-                  Mさん（40代・男性）｜将来への不安と人間関係に悩む現バス運転手
-                </h3>
-              </div>
-
-              <div className="space-y-6 mb-6">
-                <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-                  <h4 className="text-red-400 font-semibold mb-3 text-lg">
-                    Before（セッション前）
-                  </h4>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•転職を目指すも不採用。「年齢的にもう無理かも」という諦めが先行。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•住宅ローン、発達障害のある娘の育児、人間関係と課題が山積みで、どこから動いていいか分からない状態。`),
-                      }}
-                    />
-                  </ul>
-                </div>
-
-                {/* 矢印セクション */}
-                <div className="flex justify-center items-center">
-                  <div className="flex flex-col items-center gap-2 px-4 py-2 bg-gradient-to-b from-red-500/20 to-green-500/20 border border-[#d4af37]/50 rounded-full">
-                    <ArrowRight
-                      className="text-[#d4af37] animate-pulse rotate-90"
-                      size={20}
-                    />
-                    <span className="text-[#d4af37] font-bold text-sm">
-                      コーチングによる変化
-                    </span>
-                    <ArrowRight
-                      className="text-[#d4af37] animate-pulse rotate-90"
-                      size={20}
-                    />
-                  </div>
-                </div>
-
-                <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
-                  <h4 className="text-green-400 font-semibold mb-3 text-lg">
-                    After（セッション後）
-                  </h4>
-                  <ul className="space-y-2 text-gray-300 text-sm">
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「強みを活かして人脈を広げる」という突破口を発見。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•セッション当日に迷っていた採用担当者へ連絡→即行動に移し、日程調整まで完了。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•「目標を高く設定するだけで、考え方も行動もガラッと変わる」と自覚。`),
-                      }}
-                    />
-                    <li
-                      className="jp-text-optimal leading-relaxed"
-                      dangerouslySetInnerHTML={{
-                        __html: smartBreakJapanese(`•家族にもセッション内容を共有し、妻からも「ちゃんと考えてるやん」と前向きな反応が得られた。`),
-                      }}
-                    />
-                  </ul>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="p-4 bg-[#d4af37]/10 border border-[#d4af37]/30 rounded-lg">
-                  <h4 className="text-[#d4af37] font-semibold mb-2">
-                    印象的な台詞
-                  </h4>
-                  <blockquote className="text-gray-300 italic text-sm">
-                    「なんか、想像もつかん方向から解決策が出てくる気がするねん」
-                  </blockquote>
-                </div>
-
-                <div className="p-4 bg-white/5 border border-white/20 rounded-lg">
-                  <h4 className="text-white font-semibold mb-2">現在の様子</h4>
-                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
-                    転職の選択肢を広げるべく人脈構築を継続中。数人の元同僚との再接触も成功。「また迷ったら頼むわ」と継続的な自己変革に前向き。
-                  </p>
-                </div>
-
-                <div className="p-4 bg-[#e53935]/10 border border-[#e53935]/30 rounded-lg">
-                  <h4 className="text-[#e53935] font-semibold mb-2">
-                    コーチの関わりについて
-                  </h4>
-                  <p className="text-gray-300 text-sm jp-text-optimal leading-relaxed">
-                    「"やる気出せ"じゃなくて、"こう動けるやろ"って道筋を一緒に作ってくれた。コーチングってこういうことかと実感した」
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="text-center mt-8">
-            <p className="text-sm text-gray-400">
-              ※すべて本人の同意のもと、内容の一部を再構成して掲載しています。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 最終CTA */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+        {/* 最終CTA */}
+        <section className="py-12 sm:py-16 lg:py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -799,8 +365,8 @@ const ServicesPage: React.FC = () => {
                 人生を変える第一歩を、今すぐ
               </h3>
 
-              <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed jp-text-optimal">
-                {smartBreakJapanese(`フィジーク経験とコーチング技術を組み合わせた独自のアプローチでサポートします。`)}
+              <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
+                元公安警察官の経験とコーチング技術を組み合わせた独自のアプローチでサポートします。
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -823,30 +389,30 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
           </motion.div>
+        </section>
+
+        {/* ナビゲーションボタン */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-8 sm:py-12">
+          <motion.button
+            onClick={() => navigate("/main")}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] rounded-full transition-all duration-300 hover:shadow-[0_8px_32px_rgba(212,175,55,0.4)] mobile-touch-target"
+          >
+            <Home size={20} />
+            HOMEに戻る
+          </motion.button>
+
+          <motion.button
+            onClick={scrollToTop}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-transparent border-2 border-[#d4af37] text-[#d4af37] rounded-full transition-all duration-300 hover:bg-[#d4af37] hover:text-[#181818] mobile-touch-target"
+          >
+            <ArrowUp size={20} />
+            ページトップへ
+          </motion.button>
         </div>
-      </section>
-
-      {/* ナビゲーションボタン */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center py-8 sm:py-12 px-4">
-        <motion.button
-          onClick={() => navigate("/main")}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-gradient-to-r from-[#d4af37] to-[#ffd700] text-[#181818] rounded-full transition-all duration-300 hover:shadow-[0_8px_32px_rgba(212,175,55,0.4)] mobile-touch-target"
-        >
-          <Home size={20} />
-          HOMEに戻る
-        </motion.button>
-
-        <motion.button
-          onClick={scrollToTop}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-3 px-8 py-4 text-lg font-bold bg-transparent border-2 border-[#d4af37] text-[#d4af37] rounded-full transition-all duration-300 hover:bg-[#d4af37] hover:text-[#181818] mobile-touch-target"
-        >
-          <ArrowUp size={20} />
-          ページトップへ
-        </motion.button>
       </div>
     </div>
   );

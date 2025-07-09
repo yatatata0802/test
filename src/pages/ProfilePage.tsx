@@ -6,7 +6,6 @@ import SEO from "../components/SEO";
 import { profileStoryContent } from "../constants/profileStory";
 import AnimatedText from "../components/ui/AnimatedText";
 import VisualGuide from "../components/ui/VisualGuide";
-import { smartBreakJapanese } from "../smartBreakJapanese";
 
 const ProfilePage: React.FC = () => {
   const navigate = useNavigate();
@@ -337,7 +336,12 @@ const ProfilePage: React.FC = () => {
                           {item.content.split('\n\n').map((paragraph, pIndex) => (
                             <span key={pIndex}>
                               {paragraph}
-                              {pIndex < item.content.split('\n\n').length - 1 && <><br/><br/></>}
+                              {pIndex < item.content.split('\n\n').length - 1 && (
+                                <>
+                                  <br />
+                                  <br />
+                                </>
+                              )}
                             </span>
                           ))}
                         </motion.p>
