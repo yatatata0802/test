@@ -12,6 +12,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import SEO from "../components/SEO";
+import { CONTACT_INFO, ASSURANCES } from "../constants/content";
 
 interface FormData {
   name: string;
@@ -42,18 +43,6 @@ const ContactPage: React.FC = () => {
     setIsSubmitted(true);
   };
 
-  const contactInfo = [
-    { icon: Mail, text: "coaching@yatagai.com" },
-    { icon: MapPin, text: "大阪府大阪市（オンライン対応可）" },
-    { icon: Clock, text: "平日 9:00-21:00 / 土日 10:00-18:00" },
-  ];
-
-  const assurances = [
-    "無理な勧誘は一切いたしません",
-    "ご相談内容・個人情報は秘密厳守", 
-    "初回体験セッションは完全無料",
-    "24時間以内に必ずご返信",
-  ];
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -178,7 +167,7 @@ const ContactPage: React.FC = () => {
                 お気軽にご連絡ください
               </h3>
               <div className="space-y-3 sm:space-y-4">
-                {contactInfo.map((info, index) => {
+                {CONTACT_INFO.map((info, index) => {
                   const IconComponent = info.icon;
                   return (
                     <div
@@ -202,7 +191,7 @@ const ContactPage: React.FC = () => {
                 安心してご相談ください
               </h3>
               <div className="space-y-3 sm:space-y-4 text-gray-300">
-                {assurances.map((assurance, index) => (
+                {ASSURANCES.map((assurance, index) => (
                   <div key={index} className="flex items-start">
                     <Heart
                       className="text-[#d4af37] mr-3 mt-1 flex-shrink-0"

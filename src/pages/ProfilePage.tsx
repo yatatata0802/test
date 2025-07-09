@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Home, ArrowUp } from "lucide-react";
 import SEO from "../components/SEO";
-import { profileStoryContent } from "../constants/profileStory";
 import AnimatedText from "../components/ui/AnimatedText";
 import VisualGuide from "../components/ui/VisualGuide";
 
@@ -42,7 +41,6 @@ const ProfilePage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // profileStoryContentをProfilePage.tsx内に直接定義
   const profileStoryContent = [
     {
       type: "paragraph",
